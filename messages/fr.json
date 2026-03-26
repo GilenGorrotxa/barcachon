@@ -1,0 +1,64 @@
+{
+  "common": {
+    "back": "Retour",
+    "terraceSupplement": "(Seulement au rez-de-chaussée)"
+  },
+  "nav": {
+    "menu": "Carte",
+    "drinks": "Boissons",
+    "dailyMenu": "Menu",
+    "languages": "Langues"
+  },
+  "menu": {
+    "title": "Notre Carte",
+    "food": "Nourriture",
+    "drinks": "Boissons"
+  },
+  "categories": {
+    "pintxos-picar": "PINTXOS/APÉRITIFS",
+    "hamburguesas-sandwiches": "BURGERS/SANDWICHES",
+    "tostas": "TARTINES",
+    "platos-ensaladas": "PLATS COMBINÉS/SALADES",
+    "postres": "DESSERTS",
+    "cafes": "CAFÉS",
+    "refrescos": "RAFRAÎCHISSEMENTS",
+    "copas-licores": "VERRES/LIQUEURS",
+    "aperitivos": "APÉRITIFS",
+    "vinos": "VINS",
+    "cervezas": "BIÈRES"
+  },
+  "sections": {
+    "para-picar": "Apéritifs",
+    "pintxos": "Pintxos",
+    "brochetas": "Brochettes",
+    "para-compartir": "Plats à Partager",
+    "tostadas": "Tartines",
+    "tostadas-new": "NOUVEAU!",
+    "sandwiches": "Sandwiches",
+    "hamburguesas": "Burgers",
+    "hamburguesas-subtitle": "(100% viande de côtelette avec frites maison)",
+    "ensaladas": "Salades",
+    "bocadillos": "Sandwiches",
+    "platos-combinados": "Plats Combinés",
+    "menu-del-dia": "Menu du Jour",
+    "menu-infantil": "Menu Enfant",
+    "postres": "Desserts",
+    "vinos": "Vins",
+    "aperitivos": "Apéritifs",
+    "refrescos": "Rafraîchissements",
+    "cervezas": "Bières",
+    "copas": "Verres",
+    "cafes": "Cafés",
+    "combinados-licores": "Cocktails et Liqueurs"
+  },
+  "admin": {
+    "title": "Panneau d'Administration",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "dashboard": "Tableau de Bord",
+    "editMenu": "Modifier le Menu",
+    "saveChanges": "Enregistrer les Modifications"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "common": {
+    "back": "Atzera",
+    "terraceSupplement": "(Behe solairuan soilik)"
+  },
+  "nav": {
+    "menu": "Karta",
+    "drinks": "Edariak",
+    "dailyMenu": "Menua",
+    "languages": "Hizkuntzak"
+  },
+  "menu": {
+    "title": "Gure Karta",
+    "food": "Janaria",
+    "drinks": "Edariak"
+  },
+  "categories": {
+    "pintxos-picar": "PINTXOAK/PIKOTEKO",
+    "hamburguesas-sandwiches": "HANBURGESAK/SANDWICHES",
+    "tostas": "TOSTAK",
+    "platos-ensaladas": "PLATER KONBINATUAK/ENTXALADAK",
+    "postres": "POSTREAK",
+    "cafes": "KAFEAK",
+    "refrescos": "FRESKAGARRIAK",
+    "copas-licores": "KOPAK/LIKOREAK",
+    "aperitivos": "APERITIBOAK",
+    "vinos": "ARDOAK",
+    "cervezas": "GARAGARDOAK"
+  },
+  "sections": {
+    "para-picar": "Pikoteko",
+    "pintxos": "Pintxoak",
+    "brochetas": "Brotxetak",
+    "para-compartir": "Partekatzeko",
+    "tostadas": "Tostak",
+    "tostadas-new": "BERRIA!",
+    "sandwiches": "Sandwiches",
+    "hamburguesas": "Hanburgesak",
+    "hamburguesas-subtitle": "(%100 txuleta haragia eta etxeko patatak)",
+    "ensaladas": "Entxaladak",
+    "bocadillos": "Ogitartekoak",
+    "platos-combinados": "Plater Konbinatuak",
+    "menu-del-dia": "Eguneko Menua",
+    "menu-infantil": "Haurrentzako Menua",
+    "postres": "Postreak",
+    "vinos": "Ardoak",
+    "aperitivos": "Aperitiboak",
+    "refrescos": "Freskagarriak",
+    "cervezas": "Garagardoak",
+    "copas": "Kopak",
+    "cafes": "Kafeak",
+    "combinados-licores": "Konbinatuak eta Likoreak"
+  },
+  "admin": {
+    "title": "Administrazio Panela",
+    "login": "Hasi Saioa",
+    "logout": "Itxi Saioa",
+    "username": "Erabiltzailea",
+    "password": "Pasahitza",
+    "dashboard": "Aginte-panela",
+    "editMenu": "Menua Editatu",
+    "saveChanges": "Aldaketak Gorde"
+  }
+}

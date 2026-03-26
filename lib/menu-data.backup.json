@@ -1,0 +1,6038 @@
+{
+  "navigation": {
+    "mainSections": [
+      {
+        "id": "carta",
+        "type": "food",
+        "icon": "🍽️",
+        "order": 1,
+        "translations": {
+          "es": "Carta",
+          "eu": "Karta",
+          "en": "Menu",
+          "fr": "Carte"
+        },
+        "categories": [
+          {
+            "id": "para-picar",
+            "icon": "🍽️",
+            "order": 1,
+            "translations": {
+              "es": "Para Picar",
+              "eu": "Pikoteko",
+              "en": "Appetizers",
+              "fr": "Apéritifs"
+            },
+            "itemIds": []
+          },
+          {
+            "id": "pintxos",
+            "icon": "🥘",
+            "order": 2,
+            "translations": {
+              "es": "Pintxos",
+              "eu": "Pintxoak",
+              "en": "Pintxos",
+              "fr": "Pintxos"
+            },
+            "itemIds": [
+              "pintxos-001",
+              "pintxos-002",
+              "pintxos-003",
+              "pintxos-004",
+              "pintxos-005",
+              "pintxos-006",
+              "pintxos-007",
+              "pintxos-008",
+              "pintxos-009",
+              "pintxos-010"
+            ]
+          },
+          {
+            "id": "brochetas",
+            "icon": "串",
+            "order": 3,
+            "translations": {
+              "es": "Brochetas",
+              "eu": "Brotxetak",
+              "en": "Skewers",
+              "fr": "Brochettes"
+            },
+            "itemIds": ["brochetas-001", "brochetas-002"]
+          },
+          {
+            "id": "para-compartir",
+            "icon": "🍲",
+            "order": 4,
+            "translations": {
+              "es": "Para Compartir",
+              "eu": "Partekatzeko",
+              "en": "Sharing Plates",
+              "fr": "Plats à Partager"
+            },
+            "itemIds": [
+              "para-compartir-001",
+              "para-compartir-002",
+              "para-compartir-003",
+              "para-compartir-004",
+              "para-compartir-005",
+              "para-compartir-006",
+              "para-compartir-007",
+              "para-compartir-008",
+              "para-compartir-009",
+              "para-compartir-010",
+              "para-compartir-011",
+              "para-compartir-012",
+              "para-compartir-013",
+              "para-compartir-014"
+            ]
+          },
+          {
+            "id": "tostadas",
+            "icon": "🍞",
+            "order": 5,
+            "translations": {
+              "es": "Tostas",
+              "eu": "Tostak",
+              "en": "Toasts",
+              "fr": "Tartines"
+            },
+            "itemIds": [
+              "tostadas-001",
+              "tostadas-002",
+              "tostadas-003",
+              "tostadas-004"
+            ]
+          },
+          {
+            "id": "sandwiches",
+            "icon": "🥪",
+            "order": 6,
+            "translations": {
+              "es": "Sandwiches",
+              "eu": "Sandwiches",
+              "en": "Sandwiches",
+              "fr": "Sandwiches"
+            },
+            "itemIds": [
+              "sandwiches-001",
+              "sandwiches-002",
+              "sandwiches-003",
+              "sandwiches-004"
+            ]
+          },
+          {
+            "id": "hamburguesas",
+            "icon": "🍔",
+            "order": 7,
+            "translations": {
+              "es": "Hamburguesas",
+              "eu": "Hanburgesak",
+              "en": "Burgers",
+              "fr": "Burgers"
+            },
+            "itemIds": [
+              "hamburguesas-001",
+              "hamburguesas-002",
+              "hamburguesas-003"
+            ]
+          },
+          {
+            "id": "bocadillos",
+            "icon": "🥖",
+            "order": 8,
+            "translations": {
+              "es": "Bocadillos",
+              "eu": "Ogitartekoak",
+              "en": "Baguettes",
+              "fr": "Sandwiches"
+            },
+            "itemIds": [
+              "bocadillos-001",
+              "bocadillos-002",
+              "bocadillos-003",
+              "bocadillos-004",
+              "bocadillos-005",
+              "bocadillos-006",
+              "bocadillos-007",
+              "bocadillos-008",
+              "bocadillos-009",
+              "bocadillos-010",
+              "bocadillos-011",
+              "bocadillos-012",
+              "bocadillos-013"
+            ]
+          },
+          {
+            "id": "ensaladas",
+            "icon": "🥗",
+            "order": 9,
+            "translations": {
+              "es": "Ensaladas",
+              "eu": "Entxaladak",
+              "en": "Salads",
+              "fr": "Salades"
+            },
+            "itemIds": [
+              "ensaladas-001",
+              "ensaladas-002",
+              "ensaladas-003",
+              "ensaladas-004",
+              "ensaladas-005",
+              "ensaladas-006"
+            ]
+          },
+          {
+            "id": "platos-combinados",
+            "icon": "🍽️",
+            "order": 10,
+            "translations": {
+              "es": "Platos Combinados",
+              "eu": "Plater Konbinatuak",
+              "en": "Combo Dishes",
+              "fr": "Plats Combinés"
+            },
+            "itemIds": [
+              "platos-combinados-001",
+              "platos-combinados-002",
+              "platos-combinados-003",
+              "platos-combinados-004",
+              "platos-combinados-005",
+              "platos-combinados-006",
+              "platos-combinados-007",
+              "platos-combinados-008",
+              "platos-combinados-009"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bebidas",
+        "type": "drink",
+        "icon": "🥤",
+        "order": 2,
+        "translations": {
+          "es": "Bebidas",
+          "eu": "Edariak",
+          "en": "Drinks",
+          "fr": "Boissons"
+        },
+        "categories": [
+          {
+            "id": "cafes",
+            "icon": "☕",
+            "order": 1,
+            "translations": {
+              "es": "Cafés",
+              "eu": "Kafeak",
+              "en": "Coffees",
+              "fr": "Cafés"
+            },
+            "itemIds": [
+              "cafes-001",
+              "cafes-002",
+              "cafes-003",
+              "cafes-004",
+              "cafes-005",
+              "cafes-006",
+              "cafes-007",
+              "cafes-008",
+              "cafes-009",
+              "cafes-010",
+              "cafes-011",
+              "cafes-012"
+            ]
+          },
+          {
+            "id": "refrescos",
+            "icon": "🥤",
+            "order": 2,
+            "translations": {
+              "es": "Refrescos",
+              "eu": "Freskagarriak",
+              "en": "Soft Drinks",
+              "fr": "Rafraîchissements"
+            },
+            "itemIds": [
+              "refrescos-001",
+              "refrescos-002",
+              "refrescos-003",
+              "refrescos-004",
+              "refrescos-005",
+              "refrescos-006",
+              "refrescos-007"
+            ]
+          },
+          {
+            "id": "cervezas",
+            "icon": "🍺",
+            "order": 3,
+            "translations": {
+              "es": "Cervezas",
+              "eu": "Garagardoak",
+              "en": "Beers",
+              "fr": "Bières"
+            },
+            "itemIds": [
+              "cervezas-001",
+              "cervezas-002",
+              "cervezas-003",
+              "cervezas-004",
+              "cervezas-005",
+              "cervezas-006",
+              "cervezas-007",
+              "cervezas-008",
+              "cervezas-009",
+              "cervezas-010",
+              "cervezas-011",
+              "cervezas-012"
+            ]
+          },
+          {
+            "id": "vinos",
+            "icon": "🍷",
+            "order": 4,
+            "translations": {
+              "es": "Vinos",
+              "eu": "Ardoak",
+              "en": "Wines",
+              "fr": "Vins"
+            },
+            "itemIds": [
+              "vinos-001",
+              "vinos-002",
+              "vinos-003",
+              "vinos-004",
+              "vinos-005",
+              "vinos-006",
+              "vinos-007",
+              "vinos-008",
+              "vinos-009",
+              "vinos-010",
+              "vinos-011",
+              "vinos-012",
+              "vinos-013",
+              "vinos-014",
+              "vinos-015",
+              "vinos-016",
+              "vinos-017",
+              "vinos-018",
+              "vinos-019",
+              "vinos-020",
+              "vinos-021",
+              "vinos-022",
+              "vinos-023",
+              "vinos-024",
+              "vinos-025",
+              "vinos-026",
+              "vinos-027"
+            ]
+          },
+          {
+            "id": "aperitivos",
+            "icon": "🥃",
+            "order": 5,
+            "translations": {
+              "es": "Aperitivos",
+              "eu": "Aperitiboak",
+              "en": "Aperitifs",
+              "fr": "Apéritifs"
+            },
+            "itemIds": [
+              "aperitivos-001",
+              "aperitivos-002",
+              "aperitivos-003",
+              "aperitivos-004",
+              "aperitivos-005",
+              "aperitivos-006",
+              "aperitivos-007",
+              "aperitivos-008",
+              "aperitivos-009",
+              "aperitivos-010"
+            ]
+          },
+          {
+            "id": "copas-licores",
+            "icon": "🍸",
+            "order": 6,
+            "translations": {
+              "es": "Copas y Licores",
+              "eu": "Kopak eta Likoreak",
+              "en": "Cocktails & Liquors",
+              "fr": "Cocktails et Liqueurs"
+            },
+            "itemIds": [
+              "copas-licores-001",
+              "copas-licores-002",
+              "copas-licores-003",
+              "copas-licores-004",
+              "copas-licores-005",
+              "copas-licores-006",
+              "copas-licores-007",
+              "copas-licores-008",
+              "copas-licores-009",
+              "copas-licores-010",
+              "copas-licores-011",
+              "copas-licores-012",
+              "copas-licores-013",
+              "copas-licores-014",
+              "copas-licores-015",
+              "copas-licores-016",
+              "copas-licores-017",
+              "copas-licores-018",
+              "copas-licores-019",
+              "copas-licores-020"
+            ]
+          },
+          {
+            "id": "combinados",
+            "icon": "🍹",
+            "order": 7,
+            "translations": {
+              "es": "Combinados",
+              "eu": "Konbinatuak",
+              "en": "Mixed Drinks",
+              "fr": "Combinés"
+            },
+            "itemIds": ["combinados-001", "combinados-002"]
+          }
+        ]
+      },
+      {
+        "id": "menu",
+        "type": "daily-menu",
+        "icon": "📋",
+        "order": 3,
+        "translations": {
+          "es": "Menú",
+          "eu": "Menua",
+          "en": "Daily Menu",
+          "fr": "Menu du Jour"
+        },
+        "categories": [
+          {
+            "id": "menu-del-dia",
+            "icon": "📋",
+            "order": 1,
+            "translations": {
+              "es": "Menú del Día",
+              "eu": "Eguneko Menua",
+              "en": "Daily Menu",
+              "fr": "Menu du Jour"
+            },
+            "itemIds": [
+              "menu-del-dia-001",
+              "menu-del-dia-002",
+              "menu-del-dia-003",
+              "menu-del-dia-004",
+              "menu-del-dia-005"
+            ]
+          },
+          {
+            "id": "menu-infantil",
+            "icon": "👶",
+            "order": 2,
+            "translations": {
+              "es": "Menú Infantil",
+              "eu": "Haurren Menua",
+              "en": "Kids Menu",
+              "fr": "Menu Enfant"
+            },
+            "itemIds": [
+              "menu-infantil-001",
+              "menu-infantil-002",
+              "menu-infantil-003"
+            ]
+          },
+          {
+            "id": "postres",
+            "icon": "🍰",
+            "order": 3,
+            "translations": {
+              "es": "Postres",
+              "eu": "Postreak",
+              "en": "Desserts",
+              "fr": "Desserts"
+            },
+            "itemIds": [
+              "postres-001",
+              "postres-002",
+              "postres-003",
+              "postres-004"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "items": {
+    "pintxos-001": {
+      "id": "pintxos-001",
+      "slug": "cachoncitos",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Cachoncitos",
+          "description": "Pechuga de pollo, pim. verde, queso y bechamel"
+        },
+        "eu": {
+          "name": "Katxon txikiak",
+          "description": "Oilasko bularkia, piper berdea, gazta eta bexamel"
+        },
+        "en": {
+          "name": "Cachoncitos",
+          "description": "Chicken with green pepper, cheese and bechamel",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Cachoncitos",
+          "description": "Blanc de poulet, poivron vert, fromage et béchamel"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "fullPortion": 3.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "pintxos-002": {
+      "id": "pintxos-002",
+      "slug": "gambon-gabardina",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Gambón gabardina"
+        },
+        "eu": {
+          "name": "Gabardinazko ganbak"
+        },
+        "en": {
+          "name": "Battered shrimp",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Crevette panée"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "fullPortion": 3.4
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "pintxos-003": {
+      "id": "pintxos-003",
+      "slug": "bacalao-con-piperrada",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Bacalao con piperrada"
+        },
+        "eu": {
+          "name": "Bakailaoa piperradarekin"
+        },
+        "en": {
+          "name": "Cod with peppers",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Morue aux poivrons"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "unit": 3.4,
+          "fullPortion": 8.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "pintxos-004": {
+      "id": "pintxos-004",
+      "slug": "txampi",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Txampi"
+        },
+        "eu": {
+          "name": "Txampi"
+        },
+        "en": {
+          "name": "Cooked mushrooms",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Champignon cuit"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "unit": 2.5,
+          "fullPortion": 6.2
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "pintxos-005": {
+      "id": "pintxos-005",
+      "slug": "lasana-casera",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Lasaña casera"
+        },
+        "eu": {
+          "name": "Etxeko lasagna"
+        },
+        "en": {
+          "name": "Homemade lasagna",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Lasagne maison"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "fullPortion": 4.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "pintxos-006": {
+      "id": "pintxos-006",
+      "slug": "foie-a-la-plancha",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Foie a la plancha",
+          "description": "con verduritas en tempura"
+        },
+        "eu": {
+          "name": "Foiea plantxan",
+          "description": "barazki tenpurarekin"
+        },
+        "en": {
+          "name": "Grilled foie gras",
+          "description": "with veg.tempura",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Foie grillé",
+          "description": "avec légumes au tempura"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "fullPortion": 4.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "pintxos-007": {
+      "id": "pintxos-007",
+      "slug": "txorizo-a-la-sidra",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Txorizo a la sidra"
+        },
+        "eu": {
+          "name": "Txorixo sagardoan"
+        },
+        "en": {
+          "name": "Chorizo cooked in cider",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Txorizo au cidre"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "fullPortion": 2.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "pintxos-008": {
+      "id": "pintxos-008",
+      "slug": "txipiron-plancha",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Txipirón plancha",
+          "description": "con j.ibérico"
+        },
+        "eu": {
+          "name": "Txipiroi plantxan",
+          "description": "urdaiazpiko iberiarrarekin"
+        },
+        "en": {
+          "name": "Grilled Squids",
+          "description": "with iberian ham",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Calamar grillé",
+          "description": "avec jambon ibérique"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "fullPortion": 3.4
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    "pintxos-009": {
+      "id": "pintxos-009",
+      "slug": "seta-rebozada",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Seta rebozada"
+        },
+        "eu": {
+          "name": "Perretxiko irin-arrautzeztatua"
+        },
+        "en": {
+          "name": "Battered fungi mushrooms",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Champignon pané"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "fullPortion": 2.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    "pintxos-010": {
+      "id": "pintxos-010",
+      "slug": "torrezno-de-soria",
+      "categoryId": "pintxos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Torrezno de Soria"
+        },
+        "eu": {
+          "name": "Soriako txintxorta"
+        },
+        "en": {
+          "name": "Pork crackling \"Soria\" style",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Torrezno de Soria"
+        }
+      },
+      "pricing": {
+        "type": "unit-portion",
+        "currency": "EUR",
+        "values": {
+          "fullPortion": 2.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    "brochetas-001": {
+      "id": "brochetas-001",
+      "slug": "pollo-o-langostino",
+      "categoryId": "brochetas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Pollo o Langostino"
+        },
+        "eu": {
+          "name": "Oilaskoa edo ganba"
+        },
+        "en": {
+          "name": "Chicken or shrimps",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Crevette ou Poulet"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 4.2
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "brochetas-002": {
+      "id": "brochetas-002",
+      "slug": "rape-o-sepia",
+      "categoryId": "brochetas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Rape o Sepia"
+        },
+        "eu": {
+          "name": "Zapoa edo txibia"
+        },
+        "en": {
+          "name": "Monkfish or squid",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Seiche ou Lotte"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 4.7
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "para-compartir-001": {
+      "id": "para-compartir-001",
+      "slug": "calamares",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Calamares"
+        },
+        "eu": {
+          "name": "Kalamarrak"
+        },
+        "en": {
+          "name": "Calamari",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Calamars"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 8.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "para-compartir-002": {
+      "id": "para-compartir-002",
+      "slug": "patatas-bravas-cachon",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Patatas bravas Cachón",
+          "description": "(o alioli)"
+        },
+        "eu": {
+          "name": "Patatak braviolis Cachón",
+          "description": "(edo alioli)"
+        },
+        "en": {
+          "name": "Patatas bravas Cachón",
+          "description": "(or aioli)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Patatas bravas Cachón",
+          "description": "(ou aïoli)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "para-compartir-003": {
+      "id": "para-compartir-003",
+      "slug": "verduritas-en-tempura",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Verduritas en tempura"
+        },
+        "eu": {
+          "name": "Barazkiak tenpuran"
+        },
+        "en": {
+          "name": "Vegetables in tempura",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Légumes au tempura"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "para-compartir-004": {
+      "id": "para-compartir-004",
+      "slug": "sepia-salteada",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Sepia salteada",
+          "description": "(con gambas y pimientos)"
+        },
+        "eu": {
+          "name": "Txibia salteatua",
+          "description": "(brotxeta/zati)"
+        },
+        "en": {
+          "name": "Sauteed squid",
+          "description": "(with peppers and shrimps)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Seiche sautée",
+          "description": "(crevettes et poivrons)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 9.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "para-compartir-005": {
+      "id": "para-compartir-005",
+      "slug": "alitas-de-pollo",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Alitas de pollo",
+          "description": "(con alioli)"
+        },
+        "eu": {
+          "name": "Oilasko egalak",
+          "description": "(allioli saltsarekin)"
+        },
+        "en": {
+          "name": "Chicken wings",
+          "description": "(with aioli)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Ailes de poulet",
+          "description": "(avec alioli)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "para-compartir-006": {
+      "id": "para-compartir-006",
+      "slug": "gulas-a-la-donostiarra",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Gulas a la donostiarra"
+        },
+        "eu": {
+          "name": "Gulak Donostiako eran"
+        },
+        "en": {
+          "name": "Gulas a la donostiarra",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Gulas à la donostiarra"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 9.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "para-compartir-007": {
+      "id": "para-compartir-007",
+      "slug": "tortilla-bacalao",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Tortilla bacalao",
+          "description": "(o a elegir)"
+        },
+        "eu": {
+          "name": "Bakailao tortilla",
+          "description": "(edo aukeratzeko)"
+        },
+        "en": {
+          "name": "Cod peppers omelette",
+          "description": "(or other)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Omelette à la morue",
+          "description": "(ou a choix)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 8.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "para-compartir-008": {
+      "id": "para-compartir-008",
+      "slug": "pulpo-a-la-gallega",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Pulpo a la gallega"
+        },
+        "eu": {
+          "name": "Olagarroa galiziar erara"
+        },
+        "en": {
+          "name": "Galizian style octopus",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Poulpe a la gallega"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    "para-compartir-009": {
+      "id": "para-compartir-009",
+      "slug": "setas-al-ajillo",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Setas al ajillo"
+        },
+        "eu": {
+          "name": "Perretxikoak baratzurietan"
+        },
+        "en": {
+          "name": "Grilled fungi mushrooms & garlic",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Champingnon à l’ail"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    "para-compartir-010": {
+      "id": "para-compartir-010",
+      "slug": "txatka",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Txatka"
+        },
+        "eu": {
+          "name": "Txatka"
+        },
+        "en": {
+          "name": "Chatka",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Txatka"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    "para-compartir-011": {
+      "id": "para-compartir-011",
+      "slug": "ensaladilla-rusa",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Ensaladilla rusa",
+          "description": "(o de atún + 1 €)"
+        },
+        "eu": {
+          "name": "Entsalada errusiarra",
+          "description": "(edo atuna + 1 €)"
+        },
+        "en": {
+          "name": "Russian salad",
+          "description": "(or tuna mayo salad +1€)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Salade russe",
+          "description": "(ou au thon +1 €)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 11
+    },
+    "para-compartir-012": {
+      "id": "para-compartir-012",
+      "slug": "pastel-de-merluza",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Pastel de merluza"
+        },
+        "eu": {
+          "name": "Legatz pastela"
+        },
+        "en": {
+          "name": "Hake cake",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Tourte au merlu"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 8.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 12
+    },
+    "para-compartir-013": {
+      "id": "para-compartir-013",
+      "slug": "plato-de-jamon-iberico",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Plato de jamón ibérico"
+        },
+        "eu": {
+          "name": "Guijuelo urdaiazpikoa"
+        },
+        "en": {
+          "name": "Iberian ham platter",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Assiette de jambon ibérique"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 18.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 13
+    },
+    "para-compartir-014": {
+      "id": "para-compartir-014",
+      "slug": "queso-del-pais",
+      "categoryId": "para-compartir",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Queso del país"
+        },
+        "eu": {
+          "name": "Bertako gazta"
+        },
+        "en": {
+          "name": "Local cheese platter",
+          "description": "(with quince and walnuts)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Fromage Pays",
+          "description": "(avec coing et noix)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 10.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 14
+    },
+    "tostadas-001": {
+      "id": "tostadas-001",
+      "slug": "clasica",
+      "categoryId": "tostadas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Clásica",
+          "description": "AOVE, tomate y jamón ibérico"
+        },
+        "eu": {
+          "name": "Klasika",
+          "description": "AOVE, tomate eta urdaiazpikoa"
+        },
+        "en": {
+          "name": "Clásica",
+          "description": "Aove, tomato and iberian ham",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Clásica",
+          "description": "Huile d’olive vierge extra, tomate et jambon ibérique"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "tostadas-002": {
+      "id": "tostadas-002",
+      "slug": "nordica",
+      "categoryId": "tostadas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nórdica",
+          "description": "Salmón ahumado, cebolla picada huevo y queso crema"
+        },
+        "eu": {
+          "name": "Nordika",
+          "description": "Izokin ketua, tipula xehatua arrautza eta gazta krema"
+        },
+        "en": {
+          "name": "Nórdica",
+          "description": "Smoked salmon, onion, boiled egg (cream cheese)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nórdica",
+          "description": "Saumon fumé, oignon haché, oeuf et fromage à la crème"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "tostadas-003": {
+      "id": "tostadas-003",
+      "slug": "rustica",
+      "categoryId": "tostadas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Rústica",
+          "description": "Salteado de morcilla con piquillos, bacon y huevo frito"
+        },
+        "eu": {
+          "name": "Rustika",
+          "description": "Odolki salteatua, pikillo piperrekin, hirugiharrarekin eta arrautza frijitua"
+        },
+        "en": {
+          "name": "Rústica",
+          "description": "Sauteed Black pudding with piquillos, bacon and fried egg",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Rústica",
+          "description": "Boudin et piments Piquillo sautés, bacon et oeuf frite"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "tostadas-004": {
+      "id": "tostadas-004",
+      "slug": "cabrita",
+      "categoryId": "tostadas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Cabrita",
+          "description": "Piperrada, queso de cabra y nueces"
+        },
+        "eu": {
+          "name": "Kabrita",
+          "description": "Piperrada, ahuntz gazta eta intxaurrak"
+        },
+        "en": {
+          "name": "Cabrita",
+          "description": "Goat cheese, peppers and walnuts",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Cabrita",
+          "description": "Poivrons, fromage de chévre et noix"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "sandwiches-001": {
+      "id": "sandwiches-001",
+      "slug": "mixto",
+      "categoryId": "sandwiches",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Mixto",
+          "description": "Jamón y queso"
+        },
+        "eu": {
+          "name": "Mistoa",
+          "description": "Urdaiazpiko egosia eta gazta"
+        },
+        "en": {
+          "name": "Mixto",
+          "description": "Ham & Cheese",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Croque-monsieur",
+          "description": "Jambon et fromage"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "sandwiches-002": {
+      "id": "sandwiches-002",
+      "slug": "vegetal",
+      "categoryId": "sandwiches",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Vegetal",
+          "description": "Lechuga, tomate, atún, cebolla pochada, huevo y mayonesa"
+        },
+        "eu": {
+          "name": "Vegetala",
+          "description": "Letxuga, tomatea, atuna, tipula erdi egosia, arrautza eta mahonesa"
+        },
+        "en": {
+          "name": "Vegetal",
+          "description": "Lettuce, tomato, tuna, york ham, boiled egg and mayo",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Végétal",
+          "description": "Laitue, tomate, thon, jambon blanc, oeuf et mayonnaise"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "sandwiches-003": {
+      "id": "sandwiches-003",
+      "slug": "cachon",
+      "categoryId": "sandwiches",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Cachón",
+          "description": "Lechuga, tomate, pechuga de pollo, queso, bacon, huevo frito y mayonesa"
+        },
+        "eu": {
+          "name": "Cachón",
+          "description": "Letxuga, tomatea, oilasko bularkia, gazta, hirugiharra, arrautza frijitua eta mahonesa"
+        },
+        "en": {
+          "name": "Cachón",
+          "description": "Lettuce, tomato, chicken breasts, cheese, bacon, fried egg and mayo",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Cachón",
+          "description": "Laitue, tomate, poitrine de poulet, fromage, bacon, oeuf frite et mayonnaise"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 9.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "sandwiches-004": {
+      "id": "sandwiches-004",
+      "slug": "mazorriaga",
+      "categoryId": "sandwiches",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Mazorriaga",
+          "description": "Lechuga, gambas, atún y txatka"
+        },
+        "eu": {
+          "name": "Mazorriaga",
+          "description": "Letxuga, ganbak, atuna eta txatka"
+        },
+        "en": {
+          "name": "Mazorriaga",
+          "description": "Lettuce, shrimps, tuna and chatka",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Mazorriaga",
+          "description": "Laitue, crevettes, thon et txatka"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 8.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "hamburguesas-001": {
+      "id": "hamburguesas-001",
+      "slug": "clasica",
+      "categoryId": "hamburguesas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Clásica",
+          "description": "Lechuga, tomate y cebolla"
+        },
+        "eu": {
+          "name": "KlasiKa",
+          "description": "Letxuga, tomatea eta tipula"
+        },
+        "en": {
+          "name": "Clasica",
+          "description": "Lettuce, tomato and onion",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Classique",
+          "description": "Laitue, tomate et oignon"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 10.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "hamburguesas-002": {
+      "id": "hamburguesas-002",
+      "slug": "txisburger",
+      "categoryId": "hamburguesas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Txisburger",
+          "description": "Queso, huevo cocido y alioli"
+        },
+        "eu": {
+          "name": "Txisburger",
+          "description": "Gazta, arrautza egosia eta allioli"
+        },
+        "en": {
+          "name": "Txisburger",
+          "description": "Cheese, boiled egg and aioli",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Txisburger",
+          "description": "Fromage, oeuf et aïoli"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 10.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "hamburguesas-003": {
+      "id": "hamburguesas-003",
+      "slug": "cachon",
+      "categoryId": "hamburguesas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Cachón",
+          "description": "Lechuga, tomate, bacon, queso, huevo frito y cebolla pochada"
+        },
+        "eu": {
+          "name": "Cachón",
+          "description": "Letxuga, tomatea, hirugiharra, gazta, arrautza frijitua eta tipula erdi egosia"
+        },
+        "en": {
+          "name": "Cachón",
+          "description": "Lettuce, tomato, bacon cheese, fried egg and poached onion",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Cachón",
+          "description": "Laitue, tomate, bacon, fromage, oeuf au plat et oignon poché"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 12.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "bocadillos-001": {
+      "id": "bocadillos-001",
+      "slug": "a-tu-gusto",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "A tu gusto",
+          "description": "Pollo o Lomo.  Añadir extras por 0,50€ (Queso/pimientos/setas/ bacon)",
+          "extras": "+ Queso/pimientos/setas/bacon"
+        },
+        "eu": {
+          "name": "Zure guztokoa",
+          "description": "Oilasko - Solomo - Hirugiharra. Gehitu estrak 0,50 euroren truke (gazta/piperrak/perretxikoak/bacon)",
+          "extras": "+ Gazta/piperrak/perretxikoak"
+        },
+        "en": {
+          "name": "A tu gusto",
+          "description": "Chicken or Pork. Add extras for an additional €0.50 (Cheese/peppers/mushrooms/bacon)",
+          "extras": "+ cheese/peppers/mushrooms/bacon"
+        },
+        "fr": {
+          "name": "Au choix",
+          "description": "Poulet ou Porc. Ajouter des extras pour un supplément de 0,50 € (Fromage/poivrons/champignons/ lardons)",
+          "extras": "+ Fromage/poivrons/champingnons/bacon"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 5.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "bocadillos-002": {
+      "id": "bocadillos-002",
+      "slug": "de-la-tierra",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "De la tierra",
+          "description": "Lechuga, tomate, cebolla, espárrago huevo duro y mayonesa.   Añadir extras por 1€ (Pechuga de pollo o York /Atún)",
+          "extras": "+ Pechuga de pollo o York /Atún"
+        },
+        "eu": {
+          "name": "Lurretik",
+          "description": "Letxuga, tomatea, tipula, zainzuria arrautz egosia eta mahonesa. Gehitu estrak euro baten truke (oilasko bularkia edo York/Atuna)",
+          "extras": "+ Oilasko bularkia edo York egosia"
+        },
+        "en": {
+          "name": "De la tierra",
+          "description": "Lettuce, tomato, onion, asparagus, boiled egg and mayo. Add extras for an additional €1 (Chicken breast or york or tuna)",
+          "extras": "+ Chicken breast o Ham /tuna"
+        },
+        "fr": {
+          "name": "Regional",
+          "description": "Laitue, tomate, oignon, asperge, oeuf dur et mayonnaise. Ajouter des extras pour un supplément de 1 € (Poitrine de poulet ou jambon blanc / thon)",
+          "extras": "+Poitrine de poulet ou jambon blanc / thon"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 5.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "bocadillos-003": {
+      "id": "bocadillos-003",
+      "slug": "donosti",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Donosti",
+          "description": "Atún, anchoas, guindillas y cebolla"
+        },
+        "eu": {
+          "name": "Donosti",
+          "description": "Atuna, antxoa, piperminak eta tipula"
+        },
+        "en": {
+          "name": "Donosti",
+          "description": "Tuna, anchovies, green chillies and onion",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Donosti",
+          "description": "Thon, anchois, piment et oignon"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "bocadillos-004": {
+      "id": "bocadillos-004",
+      "slug": "desastre",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Desastre",
+          "description": "Huevos rotos con txorizo y patata"
+        },
+        "eu": {
+          "name": "Desastre",
+          "description": "Arrautza apurtuak, txorixo eta patata"
+        },
+        "en": {
+          "name": "Desastre",
+          "description": "Scrambled chorizo potato and egg",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Desastre",
+          "description": "Oeufs cassés avec chorizo et pomme de terre"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "bocadillos-005": {
+      "id": "bocadillos-005",
+      "slug": "matu",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Matu",
+          "description": "Pechuga empanada, huevo duro, queso y alioli"
+        },
+        "eu": {
+          "name": "Matu",
+          "description": "Oilasko panatua, arrautza egosia, gazta eta allioli saltsa"
+        },
+        "en": {
+          "name": "Matu",
+          "description": "Breaded chicken with boiled egg, cheese and aioli",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Matu",
+          "description": "Poitrine panée, oeuf dur, fromage et aïoli"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "bocadillos-006": {
+      "id": "bocadillos-006",
+      "slug": "txispi",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Txispi",
+          "description": "Lomo empanado, queso y pimientos rojos"
+        },
+        "eu": {
+          "name": "Txispi",
+          "description": "Solomo pantua, gazta eta piper gorriak"
+        },
+        "en": {
+          "name": "Txispi",
+          "description": "Pork loin, cheese and red pepper",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Txispi",
+          "description": "Filet de porc pané, fromage et poivrons rouges"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "bocadillos-007": {
+      "id": "bocadillos-007",
+      "slug": "mirentxu",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Mirentxu",
+          "description": "Queso, jamón ibérico, huevo duro y tomate"
+        },
+        "eu": {
+          "name": "Mirentxu",
+          "description": "Gazta, urdaiazpikoa, arrautza egosia eta tomatea"
+        },
+        "en": {
+          "name": "Mirentxu",
+          "description": "Cheese, iberian ham, boiled egg and tomato",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Mirentxu",
+          "description": "Fromage, jambon ibérique, oeuf dur et tomate"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "bocadillos-008": {
+      "id": "bocadillos-008",
+      "slug": "pitu",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Pitu",
+          "description": "Jamón ibérico, setas y pimiento verde"
+        },
+        "eu": {
+          "name": "Pitu",
+          "description": "Urdaiazpikoa, perretxikoak eta piper berdea"
+        },
+        "en": {
+          "name": "Pitu",
+          "description": "Iberian ham, mushrooms and green pepper",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Pitu",
+          "description": "Jambon ibérique, champignons et poivron vert"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.2
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    "bocadillos-009": {
+      "id": "bocadillos-009",
+      "slug": "pakito",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Pakito",
+          "description": "Filete y piquillos"
+        },
+        "eu": {
+          "name": "Pakito",
+          "description": "Xerra eta pikillo piperrak"
+        },
+        "en": {
+          "name": "Pakito",
+          "description": "Steak and piquillo peppers",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Pakito",
+          "description": "Steak et piments Piquillo"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    "bocadillos-010": {
+      "id": "bocadillos-010",
+      "slug": "bokata",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Bokata",
+          "description": "Tortilla de patatas",
+          "extras": "(o variadas +0,50 €)"
+        },
+        "eu": {
+          "name": "Bokata",
+          "description": "Tortilla patata (edo aukeran)",
+          "extras": "(edo askotarikoa +0,50 €)"
+        },
+        "en": {
+          "name": "Bokata",
+          "description": "Spanish omelette",
+          "extras": "(o assorted +0,50 €)"
+        },
+        "fr": {
+          "name": "Bokata",
+          "description": "Omelette espagnole",
+          "extras": "(ou variées +0,50 €)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    "bocadillos-011": {
+      "id": "bocadillos-011",
+      "slug": "calamares",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Calamares",
+          "description": "(Salsa opcional)"
+        },
+        "eu": {
+          "name": "Calamares",
+          "description": "(Allioli saltsa)"
+        },
+        "en": {
+          "name": "Calamares",
+          "description": "Calamari (option sauce)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Calamars",
+          "description": "(Sauce option)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 11
+    },
+    "bocadillos-012": {
+      "id": "bocadillos-012",
+      "slug": "mixto-iberico",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Mixto ibérico",
+          "description": "Jamón ibérico y queso a la plancha"
+        },
+        "eu": {
+          "name": "Mixto ibérico",
+          "description": "Urdaiazpikoa eta gazta"
+        },
+        "en": {
+          "name": "Mixto ibérico",
+          "description": "Grilled iberian ham and cheese",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Mixte ibérique",
+          "description": "Jambon ibérique et fromage grillé"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 7.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 12
+    },
+    "bocadillos-013": {
+      "id": "bocadillos-013",
+      "slug": "mixto-york",
+      "categoryId": "bocadillos",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Mixto York",
+          "description": "Jamón York y queso a la plancha"
+        },
+        "eu": {
+          "name": "Mixto York",
+          "description": "Urdaiazpiko egosia eta gazta"
+        },
+        "en": {
+          "name": "Mixto York",
+          "description": "Grilled ham and cheese",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Mixte York",
+          "description": "Jambon blanc et fromage grillé"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 6.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 13
+    },
+    "ensaladas-001": {
+      "id": "ensaladas-001",
+      "slug": "cachon",
+      "categoryId": "ensaladas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Cachón",
+          "description": "Lechuga, tomate, cebolla, j. ibérico, atún, endivia, gulas y salmón ahumado"
+        },
+        "eu": {
+          "name": "Cachón",
+          "description": "Letxuga, tomatea, tipula, urdaiazpikoa, atuna, endibia, gulak eta izokin ketua"
+        },
+        "en": {
+          "name": "Cachón",
+          "description": "Lettuce, tomato, onion, iberian ham, tuna endive, gulas and smoked salmon",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Cachón",
+          "description": "Laitue, tomate, oignon, jambon ibérique, thon, endive, gulas et saumon fumé"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "ensaladas-002": {
+      "id": "ensaladas-002",
+      "slug": "tximista",
+      "categoryId": "ensaladas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Tximista",
+          "description": "Mezclum, queso cabra, piña, cherry, nueces, pasas, huevo y jamón york"
+        },
+        "eu": {
+          "name": "Tximista",
+          "description": "Mezclum, cherry tomatea, intxaurrak, paxak, ahuntz gazta, arrautza egosia eta urdaiazpiko egosia"
+        },
+        "en": {
+          "name": "Tximista",
+          "description": "Mezclum, goat cheese, pineapple cherry, walnuts, raisins, boiled egg and ham",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Tximista",
+          "description": "Mezclum, ananas, cherry, noix, raisins secs, fromage chèvre, oeuf et jambon blanc"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "ensaladas-003": {
+      "id": "ensaladas-003",
+      "slug": "ortzadar",
+      "categoryId": "ensaladas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Ortzadar",
+          "description": "Pasta, maíz, tomate, aceitunas, atún, anchoas, langostinos y pim piquillo"
+        },
+        "eu": {
+          "name": "Ortzadar",
+          "description": "Pasta, artua, tomatea, olibak, atuna, antxoak, otarrainxkak eta piperrak"
+        },
+        "en": {
+          "name": "Ortzadar",
+          "description": "Pasta salad, sweetcorn, tomato, olives, tuna anchovies, prawns and piquillo pepper",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Ortzadar",
+          "description": "Pâtes, maïs, tomate, olives, thon, anchois, crevettes et piment Piquillo"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "ensaladas-004": {
+      "id": "ensaladas-004",
+      "slug": "donostiarra",
+      "categoryId": "ensaladas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Donostiarra",
+          "description": "Tomate, atún, guindillas, anchoas, aceitunas rellenas y cebolla"
+        },
+        "eu": {
+          "name": "Donostiarra",
+          "description": "Tomatea, atuna, piperminak, antxoak, olibak y tipula"
+        },
+        "en": {
+          "name": "Donostiarra",
+          "description": "Tomato, tuna, green chillies, anchovies, olives and onion",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Doe-mnostiarra",
+          "description": "Tomate, thon, piments, anchois, olives farcies et oignon"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "ensaladas-005": {
+      "id": "ensaladas-005",
+      "slug": "templada",
+      "categoryId": "ensaladas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Templada",
+          "description": "Lechuga, tomate cherry, gambas, gulas al ajillo, calamar y setas"
+        },
+        "eu": {
+          "name": "Templada",
+          "description": "Letxuga, cherry tomatea, ganbak, baratxuri gulak, txipiroiak eta perretxikoak"
+        },
+        "en": {
+          "name": "Templada",
+          "description": "Lettuce, cherry, shrimps, gulas, squid and fungi mushroom",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Tiède",
+          "description": "Laitue, tomate cherry, gambas, gulas à l’ail, calamar et champignons"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "ensaladas-006": {
+      "id": "ensaladas-006",
+      "slug": "mixta",
+      "categoryId": "ensaladas",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Mixta",
+          "description": "Lechuga, tomate, cebolla, atún, huevo duro, aceitunas y espárrago"
+        },
+        "eu": {
+          "name": "Mixta",
+          "description": "Letxuga, tomatea, tipula, atuna, arrautza egosia, olibak eta zainzuria"
+        },
+        "en": {
+          "name": "Mixta",
+          "description": "Lettuce, tomato, onion, tuna, boiled egg, olives and asparragus",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Mixte",
+          "description": "Laitue, tomate, oignon, thon oeuf dur, olives et asperge"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 9.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "platos-combinados-001": {
+      "id": "platos-combinados-001",
+      "slug": "no1",
+      "categoryId": "platos-combinados",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nº1",
+          "description": "Huevos fritos, jamón ibérico, patatas y pimientos"
+        },
+        "eu": {
+          "name": "Nº1",
+          "description": "Arrautz frijituak, urdaiazpikoa, patatak eta piperrak"
+        },
+        "en": {
+          "name": "Nº1",
+          "description": "Fried eggs, iberian ham, peppers and fries",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº1",
+          "description": "Oeufs frites, jambon ibérique, frites et poivrons"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "platos-combinados-002": {
+      "id": "platos-combinados-002",
+      "slug": "no2",
+      "categoryId": "platos-combinados",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nº2",
+          "description": "Milanesa, ensaladilla, patatas y pimientos"
+        },
+        "eu": {
+          "name": "Nº2",
+          "description": "Milango erana, entsalada errusiarra, patatak eta piperrak"
+        },
+        "en": {
+          "name": "Nº2",
+          "description": "Breaded pork loin with cheese, russian salad, peppers and fries",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº2",
+          "description": "Escalope à la milanaise, salade russe, frites et poivrons"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "platos-combinados-003": {
+      "id": "platos-combinados-003",
+      "slug": "no3",
+      "categoryId": "platos-combinados",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nº3",
+          "description": "Escalope (o filete), huevo frito, patatas y pimientos"
+        },
+        "eu": {
+          "name": "Nº3",
+          "description": "Eskalopea (edo xerra), arrautza frijituak, patatak eta piperrak"
+        },
+        "en": {
+          "name": "Nº3",
+          "description": "Breaded steak (or grilled), fried egg, peppers and fries",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº3",
+          "description": "Escalope (ou steak de veau), oeuf frite, frites et poivrons"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 14.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "platos-combinados-004": {
+      "id": "platos-combinados-004",
+      "slug": "no4",
+      "categoryId": "platos-combinados",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nº4",
+          "description": "Pechugas de pollo plancha, ensalada, patatas y bacon"
+        },
+        "eu": {
+          "name": "Nº4",
+          "description": "Oilasko bularkia plantxan, entsalada, patatak eta hirugiharra"
+        },
+        "en": {
+          "name": "Nº4",
+          "description": "Grilled chicken breasts, salad, bacon and fries",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº4",
+          "description": "Poitrine de poulet grillée, salade, frites et bacon"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "platos-combinados-005": {
+      "id": "platos-combinados-005",
+      "slug": "no5",
+      "categoryId": "platos-combinados",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nº5",
+          "description": "Spaghetti boloñesa (casera) y 2 croquetas de jamón"
+        },
+        "eu": {
+          "name": "Nº5",
+          "description": "Espagetia bolognako erara eta 2 urdaiazpiko kroketak"
+        },
+        "en": {
+          "name": "Nº5",
+          "description": "Spaggetti bolognese (homemade), 2 ham and croquettes",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº5",
+          "description": "Spaguetti bolognaise (maison) et 2 croquettes au jambon"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "platos-combinados-006": {
+      "id": "platos-combinados-006",
+      "slug": "no6",
+      "categoryId": "platos-combinados",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nº6",
+          "description": "Merluza rebozada, ensalada, txipis plancha y mayonesa"
+        },
+        "eu": {
+          "name": "Nº6",
+          "description": "Legatz irin-arrautzeztatua, entsalada eta txipis plantxa"
+        },
+        "en": {
+          "name": "Nº6",
+          "description": "Battered hake, salad and grilled squids and mayo",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº6",
+          "description": "Merlu en beignet, salade, petits calamars grillés et mayonnaise"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 14.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "platos-combinados-007": {
+      "id": "platos-combinados-007",
+      "slug": "no7",
+      "categoryId": "platos-combinados",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nº7",
+          "description": "Mezclum, setas, piquillos, hamburguesa vegetariana y verduritas en tempura"
+        },
+        "eu": {
+          "name": "Nº7",
+          "description": "Mezclum, perretxikoak, pikillo piperrak, hanburgesa begetarianoa eta barazki txikiak tenpuran"
+        },
+        "en": {
+          "name": "Nº7",
+          "description": "Mezclum, fungi mushrooms, piquillos, veggie burger and veg. tempura",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº7",
+          "description": "Mezclum, champignons,3 Piquillo, hamburger veggie et légumes au tempura"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "platos-combinados-008": {
+      "id": "platos-combinados-008",
+      "slug": "no8",
+      "categoryId": "platos-combinados",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nº8",
+          "description": "Huevos fritos, croquetas, calamares y patatas"
+        },
+        "eu": {
+          "name": "Nº8",
+          "description": "Arrautza frijituak kroquetak, txipiroiak eta patatak"
+        },
+        "en": {
+          "name": "Nº8",
+          "description": "Fried eggs, croquettes, calamari and fries",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº8",
+          "description": "Oeufs frites, croquettes, calamars et frites"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 13.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    "platos-combinados-009": {
+      "id": "platos-combinados-009",
+      "slug": "no9",
+      "categoryId": "platos-combinados",
+      "mainSectionId": "carta",
+      "translations": {
+        "es": {
+          "name": "Nº9",
+          "description": "Entrecôt, piquillos y patatas (salsa opcional)"
+        },
+        "eu": {
+          "name": "Nº9",
+          "description": "Entrekota (Piper edo Roquefort saltsa) piperrak eta patatak"
+        },
+        "en": {
+          "name": "Nº9",
+          "description": "Entrecot, piquillo peppers and fries (sauce option)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº9",
+          "description": "Entrecôte, poivrons et frites (sauce option)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 15.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    "menu-del-dia-001": {
+      "id": "menu-del-dia-001",
+      "slug": "marmitako",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "MARMITAKO",
+          "description": "PESCADO fresco del DÍA"
+        },
+        "eu": {
+          "name": "MARMITAKO",
+          "description": "EGUNEKO ARRAIN Freskoa"
+        },
+        "en": {
+          "name": "MARMITAKO",
+          "description": "PESCADO fresco del DÍA",
+          "extras": ""
+        },
+        "fr": {
+          "name": "MARMITAKO",
+          "description": "PESCADO fresco del DÍA"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "menu-del-dia-002": {
+      "id": "menu-del-dia-002",
+      "slug": "guisantes-con-jamon",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "GUISANTES con JAMÓN",
+          "description": "BACALAO AJOARRIERO"
+        },
+        "eu": {
+          "name": "Ilarrak urdaiazpikoarekin",
+          "description": "BAKAILAO AJOARRIERO"
+        },
+        "en": {
+          "name": "GUISANTES con JAMÓN",
+          "description": "BACALAO AJOARRIERO",
+          "extras": ""
+        },
+        "fr": {
+          "name": "GUISANTES con JAMÓN",
+          "description": "BACALAO AJOARRIERO"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "menu-del-dia-003": {
+      "id": "menu-del-dia-003",
+      "slug": "pastel-templado-de-mejillones",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "PASTEL templado de MEJILLONES",
+          "description": "MILANESAS de LOMO con GUARNICIÓN"
+        },
+        "eu": {
+          "name": "MUSKUILU PILA Epela",
+          "description": "MILANESA DE LOMOA GAINERArekin"
+        },
+        "en": {
+          "name": "PASTEL templado de MEJILLONES",
+          "description": "MILANESAS de LOMO con GUARNICIÓN",
+          "extras": ""
+        },
+        "fr": {
+          "name": "PASTEL templado de MEJILLONES",
+          "description": "MILANESAS de LOMO con GUARNICIÓN"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "menu-del-dia-004": {
+      "id": "menu-del-dia-004",
+      "slug": "desastre",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "\\\"DESASTRE\\\"",
+          "description": "COSTILLA de TERNERA con PIMIENTOS verdes"
+        },
+        "eu": {
+          "name": "\\\"HONDAMENDIA\\\"",
+          "description": "TXHALA SAHAIKI PIPER berdeekin"
+        },
+        "en": {
+          "name": "\"DESASTRE\"",
+          "description": "COSTILLA de TERNERA con PIMIENTOS verdes",
+          "extras": ""
+        },
+        "fr": {
+          "name": "\\\"DESASTRE\\\"",
+          "description": "COSTILLA de TERNERA con PIMIENTOS verdes"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "menu-del-dia-005": {
+      "id": "menu-del-dia-005",
+      "slug": "ensalada-mixta",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "ENSALADA MIXTA",
+          "description": "FILETE con PATATAS caseras (ENTRECÔTTE + 3 €)"
+        },
+        "eu": {
+          "name": "ENTSALADA Mistoa",
+          "description": "TXULLETA Etxeko PATATekin (ENTRECÔTTE + 3€)"
+        },
+        "en": {
+          "name": "ENSALADA MIXTA",
+          "description": "FILETE con PATATAS caseras (ENTRECÔTTE + 3 €)",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ENSALADA MIXTA",
+          "description": "FILETE con PATATAS caseras (ENTRECÔTTE + 3 €)"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "menu-infantil-001": {
+      "id": "menu-infantil-001",
+      "slug": "no10",
+      "categoryId": "menu-infantil",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "Nº10",
+          "description": "Pechuga de pollo o lomo con patatas caseras"
+        },
+        "eu": {
+          "name": "Nº10",
+          "description": "Oilasko bularkia edo solomo etxeko patatekin"
+        },
+        "en": {
+          "name": "Nº10",
+          "description": "Chicken breats or pork loin with fries",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº10",
+          "description": "Poitrine de poulet ou filet de porc avec frites (maison)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 9.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "menu-infantil-002": {
+      "id": "menu-infantil-002",
+      "slug": "no11",
+      "categoryId": "menu-infantil",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "Nº11",
+          "description": "Espaguetis con tomate"
+        },
+        "eu": {
+          "name": "Nº11",
+          "description": "Espagetia tomatearekin"
+        },
+        "en": {
+          "name": "Nº11",
+          "description": "Spaguetti with tomato sauce",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº11",
+          "description": "Spaghetti à la tomate"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 9.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "menu-infantil-003": {
+      "id": "menu-infantil-003",
+      "slug": "no12",
+      "categoryId": "menu-infantil",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "Nº12",
+          "description": "Huevos fritos con patatas caseras"
+        },
+        "eu": {
+          "name": "Nº12",
+          "description": "Arrautza frijituak etxeko patatekin"
+        },
+        "en": {
+          "name": "Nº12",
+          "description": "Fried eggs with fries",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Nº12",
+          "description": "Oeufs frites avec frites (maison)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 9.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "postres-001": {
+      "id": "postres-001",
+      "slug": "postres-caseros",
+      "categoryId": "postres",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "POSTRES CASEROS"
+        },
+        "eu": {
+          "name": "POSTRES KASEROAK"
+        },
+        "en": {
+          "name": "HOMEMADE DESSERTS",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "DESSERTS MAISON"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 5.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "postres-002": {
+      "id": "postres-002",
+      "slug": "tartas-variadas",
+      "categoryId": "postres",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "TARTAS VARIADAS"
+        },
+        "eu": {
+          "name": "TARTA HAUSITAKOAK"
+        },
+        "en": {
+          "name": "VARIED PIES",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "TARTES VARIÉES"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 5.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "postres-003": {
+      "id": "postres-003",
+      "slug": "yogur",
+      "categoryId": "postres",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "YOGUR"
+        },
+        "eu": {
+          "name": "JOGURTA"
+        },
+        "en": {
+          "name": "YOGURT",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "YAOURT"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "postres-004": {
+      "id": "postres-004",
+      "slug": "tarrina-helado",
+      "categoryId": "postres",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "TARRINA HELADO"
+        },
+        "eu": {
+          "name": "IHOZKO IZOZKIA"
+        },
+        "en": {
+          "name": "ICE CREAM CUP",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "POT DE GLACE"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 3.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "cafes-001": {
+      "id": "cafes-001",
+      "slug": "solo-cortado",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "SOLO, CORTADO"
+        },
+        "eu": {
+          "name": "SOLO, KORTATUA"
+        },
+        "en": {
+          "name": "ESPRESSO, CUT",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ESPRESSO, COUPÉ"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 1.7
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "cafes-002": {
+      "id": "cafes-002",
+      "slug": "con-leche",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CON LECHE"
+        },
+        "eu": {
+          "name": "ESNEAREKIN"
+        },
+        "en": {
+          "name": "WITH MILK",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "AU LAIT"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 1.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "cafes-003": {
+      "id": "cafes-003",
+      "slug": "capuccino",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CAPUCCINO"
+        },
+        "eu": {
+          "name": "CAPPUCCINO"
+        },
+        "en": {
+          "name": "CAPPUCCINO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CAPPUCCINO"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.3
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "cafes-004": {
+      "id": "cafes-004",
+      "slug": "infusionte",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "INFUSION/TÉ"
+        },
+        "eu": {
+          "name": "INFUSIOA/TEA"
+        },
+        "en": {
+          "name": "INFUSION/TEA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "INFUSION/THÉ"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.1
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "cafes-005": {
+      "id": "cafes-005",
+      "slug": "cola-cao",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "COLA-CAO"
+        },
+        "eu": {
+          "name": "COLA-CAO"
+        },
+        "en": {
+          "name": "HOT CHOCOLATE",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CHOCOLAT CHAUD"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "cafes-006": {
+      "id": "cafes-006",
+      "slug": "desayuno",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "DESAYUNO"
+        },
+        "eu": {
+          "name": "GOIZEKO BUFETEA"
+        },
+        "en": {
+          "name": "BREAKFAST",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "PETIT-DÉJEUNER"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 3.8
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "cafes-007": {
+      "id": "cafes-007",
+      "slug": "vaso-de-leche",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "VASO DE LECHE"
+        },
+        "eu": {
+          "name": "ESNEAREN GOTXIKOA"
+        },
+        "en": {
+          "name": "GLASS OF MILK",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "VERRE DE LAIT"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 1.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "cafes-008": {
+      "id": "cafes-008",
+      "slug": "desayuno-con-zumo",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "DESAYUNO CON ZUMO"
+        },
+        "eu": {
+          "name": "GOIZEKO BUFETEA ZUMOAREKIN"
+        },
+        "en": {
+          "name": "BREAKFAST WITH JUICE",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "PETIT-DÉJEUNER AVEC JUS"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 5.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    "cafes-009": {
+      "id": "cafes-009",
+      "slug": "cafe-con-conac",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CAFÉ CON COÑAC"
+        },
+        "eu": {
+          "name": "KAFE KONJAKIN"
+        },
+        "en": {
+          "name": "COFFEE WITH BRANDY",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CAFÉ AU COGNAC"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.2
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    "cafes-010": {
+      "id": "cafes-010",
+      "slug": "cafe-con-bailey-s",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CAFÉ CON BAILEY´S"
+        },
+        "eu": {
+          "name": "KAFE BAILEY´SAREKIN"
+        },
+        "en": {
+          "name": "COFFEE WITH BAILEY´S",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CAFÉ AU BAILEY´S"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.3
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    "cafes-011": {
+      "id": "cafes-011",
+      "slug": "carajillo-conac",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CARAJILLO COÑAC"
+        },
+        "eu": {
+          "name": "CARAJILLO KONJAKIN"
+        },
+        "en": {
+          "name": "CARAJILLO WITH BRANDY",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CARAJILLO AU COGNAC"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 3.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 11
+    },
+    "cafes-012": {
+      "id": "cafes-012",
+      "slug": "carajillo-whiskyron",
+      "categoryId": "cafes",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CARAJILLO WHISKY/RON"
+        },
+        "eu": {
+          "name": "CARAJILLO WHISKY/RON"
+        },
+        "en": {
+          "name": "CARAJILLO WHISKY/RUM",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CARAJILLO WHISKY/RHUM"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 4.7
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 12
+    },
+    "refrescos-001": {
+      "id": "refrescos-001",
+      "slug": "refrescos",
+      "categoryId": "refrescos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "REFRESCOS"
+        },
+        "eu": {
+          "name": "HERRIKO EDARIAK"
+        },
+        "en": {
+          "name": "SOFT DRINKS",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BOISSONS NON ALCOOLISÉES"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "refrescos-002": {
+      "id": "refrescos-002",
+      "slug": "zumos-batidos",
+      "categoryId": "refrescos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ZUMOS / BATIDOS"
+        },
+        "eu": {
+          "name": "ZUMOAK / BOTILATUAK"
+        },
+        "en": {
+          "name": "JUICES / SMOOTHIES",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "JUS / SMOOTHIES"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "refrescos-003": {
+      "id": "refrescos-003",
+      "slug": "refrescos-grandes",
+      "categoryId": "refrescos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "REFRESCOS GRANDES"
+        },
+        "eu": {
+          "name": "HERRIKO EDARIAK HANDIAK"
+        },
+        "en": {
+          "name": "LARGE SOFT DRINKS",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "GRANDES BOISSONS NON ALCOOLISÉES"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 3.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "refrescos-004": {
+      "id": "refrescos-004",
+      "slug": "agua",
+      "categoryId": "refrescos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "AGUA"
+        },
+        "eu": {
+          "name": "UR"
+        },
+        "en": {
+          "name": "WATER",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "EAU"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 1.7
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "refrescos-005": {
+      "id": "refrescos-005",
+      "slug": "gaseosa",
+      "categoryId": "refrescos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "GASEOSA"
+        },
+        "eu": {
+          "name": "GASEOSA"
+        },
+        "en": {
+          "name": "SODA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "SODA"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.1
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "refrescos-006": {
+      "id": "refrescos-006",
+      "slug": "latas-para-llevar",
+      "categoryId": "refrescos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "LATAS (para llevar)"
+        },
+        "eu": {
+          "name": "LATAK (eramateko)"
+        },
+        "en": {
+          "name": "CANS (to go)",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BOÎTES (à emporter)"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "refrescos-007": {
+      "id": "refrescos-007",
+      "slug": "perrier",
+      "categoryId": "refrescos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "PERRIER"
+        },
+        "eu": {
+          "name": "PERRIER"
+        },
+        "en": {
+          "name": "PERRIER",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "PERRIER"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "cervezas-001": {
+      "id": "cervezas-001",
+      "slug": "canaclimon-00",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CAÑA/C.LIMON / 0,0"
+        },
+        "eu": {
+          "name": "CAÑA/C.LIMON / 0,0"
+        },
+        "en": {
+          "name": "CAÑA/C.LIMON / 0,0",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CAÑA/C.LIMON / 0,0"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 2.9,
+          "large": 3.4
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "cervezas-002": {
+      "id": "cervezas-002",
+      "slug": "cana-tostada",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CAÑA TOSTADA"
+        },
+        "eu": {
+          "name": "CAÑA TOSTADA"
+        },
+        "en": {
+          "name": "CAÑA TOSTADA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CAÑA TOSTADA"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.4,
+          "large": 3.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "cervezas-003": {
+      "id": "cervezas-003",
+      "slug": "zurito-tostado",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ZURITO /TOSTADO"
+        },
+        "eu": {
+          "name": "ZURITO /TOSTADO"
+        },
+        "en": {
+          "name": "ZURITO /TOSTADO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ZURITO /TOSTADO"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 1.7,
+          "large": 2.2
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "cervezas-004": {
+      "id": "cervezas-004",
+      "slug": "keler-txiki-handi",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "KELER TXIKI / HANDI"
+        },
+        "eu": {
+          "name": "KELER TXIKI / HANDI"
+        },
+        "en": {
+          "name": "KELER TXIKI / HANDI",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "KELER TXIKI / HANDI"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 2.3,
+          "large": 3.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "cervezas-005": {
+      "id": "cervezas-005",
+      "slug": "estrella-galicia-txikihandi",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ESTRELLA GALICIA TXIKI/HANDI"
+        },
+        "eu": {
+          "name": "ESTRELLA GALICIA TXIKI/HANDI"
+        },
+        "en": {
+          "name": "ESTRELLA GALICIA TXIKI/HANDI",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ESTRELLA GALICIA TXIKI/HANDI"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 2.5,
+          "large": 3.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "cervezas-006": {
+      "id": "cervezas-006",
+      "slug": "bot-tostada-00",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "BOT. TOSTADA 0,0"
+        },
+        "eu": {
+          "name": "BOT. TOSTADA 0,0"
+        },
+        "en": {
+          "name": "BOT. TOSTADA 0,0",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BOT. TOSTADA 0,0"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "cervezas-007": {
+      "id": "cervezas-007",
+      "slug": "bot-sin-alcohol-15",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "BOT. SIN ALCOHOL 1/5"
+        },
+        "eu": {
+          "name": "BOT. SIN ALCOHOL 1/5"
+        },
+        "en": {
+          "name": "BOT. SIN ALCOHOL 1/5",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BOT. SIN ALCOHOL 1/5"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 2.3
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "cervezas-008": {
+      "id": "cervezas-008",
+      "slug": "heineken",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "HEINEKEN"
+        },
+        "eu": {
+          "name": "HEINEKEN"
+        },
+        "en": {
+          "name": "HEINEKEN",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "HEINEKEN"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    "cervezas-009": {
+      "id": "cervezas-009",
+      "slug": "alhambra",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ALHAMBRA"
+        },
+        "eu": {
+          "name": "ALHAMBRA"
+        },
+        "en": {
+          "name": "ALHAMBRA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ALHAMBRA"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    "cervezas-010": {
+      "id": "cervezas-010",
+      "slug": "voltdamm",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "VOLTDAMM"
+        },
+        "eu": {
+          "name": "VOLTDAMM"
+        },
+        "en": {
+          "name": "VOLTDAMM",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "VOLTDAMM"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    "cervezas-011": {
+      "id": "cervezas-011",
+      "slug": "ipa",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "IPA"
+        },
+        "eu": {
+          "name": "IPA"
+        },
+        "en": {
+          "name": "IPA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "IPA"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 11
+    },
+    "cervezas-012": {
+      "id": "cervezas-012",
+      "slug": "lata-ambar",
+      "categoryId": "cervezas",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "LATA AMBAR"
+        },
+        "eu": {
+          "name": "LATA AMBAR"
+        },
+        "en": {
+          "name": "LATA AMBAR",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "LATA AMBAR"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 2.3
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 12
+    },
+    "vinos-001": {
+      "id": "vinos-001",
+      "slug": "tinto-del-ano",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "TINTO DEL AÑO"
+        },
+        "eu": {
+          "name": "Urtea Gorría"
+        },
+        "en": {
+          "name": "Red of the Year",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Rouge de l\\"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 1.5,
+          "bottle": 9.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "vinos-002": {
+      "id": "vinos-002",
+      "slug": "luis-canas-ano",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "LUIS CAÑAS AÑO"
+        },
+        "eu": {
+          "name": "LUIS CAÑAS URTEA"
+        },
+        "en": {
+          "name": "LUIS CAÑAS YEAR",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "LUIS CAÑAS ANNÉE"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.0,
+          "bottle": 12.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "vinos-003": {
+      "id": "vinos-003",
+      "slug": "crianzas-bordonberoniavinarealpda",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CRIANZAS (BORDON,BERONIA,VIÑAREAL,PdA,..)"
+        },
+        "eu": {
+          "name": "CRIANZAS (BORDON,BERONIA,VIÑAREAL,PdA,..)"
+        },
+        "en": {
+          "name": "CRIANZAS (BORDON,BERONIA,VIÑAREAL,PdA,..)",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CRIANZAS (BORDON,BERONIA,VIÑAREAL,PdA,..)"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.2,
+          "bottle": 13.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "vinos-004": {
+      "id": "vinos-004",
+      "slug": "rioja-reserva",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "RIOJA RESERVA"
+        },
+        "eu": {
+          "name": "RIOJA ERRESERBA"
+        },
+        "en": {
+          "name": "RIOJA RESERVE",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "RIOJA RÉSERVE"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.8,
+          "bottle": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "vinos-005": {
+      "id": "vinos-005",
+      "slug": "campillo",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CAMPILLO"
+        },
+        "eu": {
+          "name": "CAMPILLO"
+        },
+        "en": {
+          "name": "CAMPILLO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CAMPILLO"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.8,
+          "bottle": 17.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "vinos-006": {
+      "id": "vinos-006",
+      "slug": "muga",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "MUGA"
+        },
+        "eu": {
+          "name": "MUGA"
+        },
+        "en": {
+          "name": "MUGA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "MUGA"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 3.5,
+          "bottle": 23.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "vinos-007": {
+      "id": "vinos-007",
+      "slug": "ribera-del-duero",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "RIBERA DEL DUERO"
+        },
+        "eu": {
+          "name": "RIBERA DEL DUERO"
+        },
+        "en": {
+          "name": "RIBERA DEL DUERO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "RIBERA DEL DUERO"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.8,
+          "bottle": 17.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "vinos-008": {
+      "id": "vinos-008",
+      "slug": "azpilicueta",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "AZPILICUETA"
+        },
+        "eu": {
+          "name": "AZPILIKUETA"
+        },
+        "en": {
+          "name": "AZPILICUETA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "AZPILICUETA"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.4,
+          "bottle": 14.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    "vinos-009": {
+      "id": "vinos-009",
+      "slug": "12lunas-somontano",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "12LUNAS SOMONTANO"
+        },
+        "eu": {
+          "name": "12ILARGI SOMONTANO"
+        },
+        "en": {
+          "name": "12MOONS SOMONTANO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "12LUNES SOMONTANO"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.6,
+          "bottle": 15.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    "vinos-010": {
+      "id": "vinos-010",
+      "slug": "blanco-rueda",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "BLANCO RUEDA"
+        },
+        "eu": {
+          "name": "RUEDA ZURI"
+        },
+        "en": {
+          "name": "WHITE RUEDA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BLANC RUEDA"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 1.5,
+          "bottle": 8.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    "vinos-011": {
+      "id": "vinos-011",
+      "slug": "blanco-verdejo-sup",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "BLANCO VERDEJO SUP."
+        },
+        "eu": {
+          "name": "BERDEJO ZURI GOI"
+        },
+        "en": {
+          "name": "WHITE VERDEJO SUP.",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BLANC VERDEJO SUP."
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.0,
+          "bottle": 12.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 11
+    },
+    "vinos-012": {
+      "id": "vinos-012",
+      "slug": "chardonnay",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CHARDONNAY"
+        },
+        "eu": {
+          "name": "CHARDONNAY"
+        },
+        "en": {
+          "name": "CHARDONNAY",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CHARDONNAY"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.0,
+          "bottle": 9.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 12
+    },
+    "vinos-013": {
+      "id": "vinos-013",
+      "slug": "enate-chardonnay",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ENATE CHARDONNAY"
+        },
+        "eu": {
+          "name": "ENATE CHARDONNAY"
+        },
+        "en": {
+          "name": "ENATE CHARDONNAY",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ENATE CHARDONNAY"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.5,
+          "bottle": 16.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 13
+    },
+    "vinos-014": {
+      "id": "vinos-014",
+      "slug": "rioja-blanco",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "RIOJA BLANCO"
+        },
+        "eu": {
+          "name": "RIOJA ZURI"
+        },
+        "en": {
+          "name": "WHITE RIOJA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BLANC RIOJA"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.0,
+          "bottle": 13.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 14
+    },
+    "vinos-015": {
+      "id": "vinos-015",
+      "slug": "moscato",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "MOSCATO"
+        },
+        "eu": {
+          "name": "MOSKATO"
+        },
+        "en": {
+          "name": "MOSCATO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "MOSCATO"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.0,
+          "bottle": 12.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 15
+    },
+    "vinos-016": {
+      "id": "vinos-016",
+      "slug": "albarino",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ALBARIÑO"
+        },
+        "eu": {
+          "name": "ALBARIÑO"
+        },
+        "en": {
+          "name": "ALBARIÑO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ALBARIÑO"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.5,
+          "bottle": 18.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 16
+    },
+    "vinos-017": {
+      "id": "vinos-017",
+      "slug": "jose-pariente-verdejo",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "JOSE PARIENTE VERDEJO"
+        },
+        "eu": {
+          "name": "JOSE PARIENTE BERDEJO"
+        },
+        "en": {
+          "name": "JOSE PARIENTE VERDEJO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "JOSE PARIENTE VERDEJO"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.5,
+          "bottle": 18.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 17
+    },
+    "vinos-018": {
+      "id": "vinos-018",
+      "slug": "monjardin-chardonnay",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "MONJARDIN CHARDONNAY"
+        },
+        "eu": {
+          "name": "MONJARDIN CHARDONNAY"
+        },
+        "en": {
+          "name": "MONJARDIN CHARDONNAY",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "MONJARDIN CHARDONNAY"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.2,
+          "bottle": 13.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 18
+    },
+    "vinos-019": {
+      "id": "vinos-019",
+      "slug": "rosado-gran-feudo",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ROSADO GRAN FEUDO"
+        },
+        "eu": {
+          "name": "GRAN FEUDO ARROSA"
+        },
+        "en": {
+          "name": "ROSADO GRAN FEUDO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ROSÉ GRAN FEUDO"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 1.5,
+          "bottle": 9.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 19
+    },
+    "vinos-020": {
+      "id": "vinos-020",
+      "slug": "rosado-rose-o-cordovin",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ROSADO ROSÉ O CORDOVIN"
+        },
+        "eu": {
+          "name": "ROSADO ROSÉ EDO CORDOVIN"
+        },
+        "en": {
+          "name": "ROSADO ROSÉ O CORDOVIN",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ROSÉ ROSÉ O CORDOVIN"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 1.5,
+          "bottle": 9.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 20
+    },
+    "vinos-021": {
+      "id": "vinos-021",
+      "slug": "cresta-rosa",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CRESTA ROSA"
+        },
+        "eu": {
+          "name": "CRESTA ROSA"
+        },
+        "en": {
+          "name": "CRESTA ROSA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CRESTA ROSA"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.0,
+          "bottle": 12.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 21
+    },
+    "vinos-022": {
+      "id": "vinos-022",
+      "slug": "txakoli",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "TXAKOLI"
+        },
+        "eu": {
+          "name": "TXAKOLI"
+        },
+        "en": {
+          "name": "TXAKOLI",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "TXAKOLI"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.2,
+          "bottle": 13.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 22
+    },
+    "vinos-023": {
+      "id": "vinos-023",
+      "slug": "sidra",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "SIDRA"
+        },
+        "eu": {
+          "name": "SAGAROA"
+        },
+        "en": {
+          "name": "CIDER",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CIDRE"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 1.3,
+          "bottle": 4.2
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 23
+    },
+    "vinos-024": {
+      "id": "vinos-024",
+      "slug": "cava",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CAVA"
+        },
+        "eu": {
+          "name": "CAVA"
+        },
+        "en": {
+          "name": "CAVA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CAVA"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 3.1,
+          "bottle": 13.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 24
+    },
+    "vinos-025": {
+      "id": "vinos-025",
+      "slug": "kalimotxo",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "KALIMOTXO"
+        },
+        "eu": {
+          "name": "KALIMOTXO"
+        },
+        "en": {
+          "name": "KALIMOTXO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "KALIMOTXO"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 3.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 25
+    },
+    "vinos-026": {
+      "id": "vinos-026",
+      "slug": "sangria",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "SANGRIA"
+        },
+        "eu": {
+          "name": "SANGRIA"
+        },
+        "en": {
+          "name": "SANGRIA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "SANGRIA"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 4.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 26
+    },
+    "vinos-027": {
+      "id": "vinos-027",
+      "slug": "tinto-de-verano",
+      "categoryId": "vinos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "TINTO DE VERANO"
+        },
+        "eu": {
+          "name": "UDABERRIKO GORRIA"
+        },
+        "en": {
+          "name": "SUMMER RED",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "ROUGE D\\"
+        }
+      },
+      "pricing": {
+        "type": "glass-bottle",
+        "currency": "EUR",
+        "values": {
+          "glass": 2.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 27
+    },
+    "aperitivos-001": {
+      "id": "aperitivos-001",
+      "slug": "mosto",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "MOSTO"
+        },
+        "eu": {
+          "name": "MOSTO"
+        },
+        "en": {
+          "name": "GRAPE JUICE",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "JUS DE RAISIN"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 1.7,
+          "large": 2.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "aperitivos-002": {
+      "id": "aperitivos-002",
+      "slug": "marianito",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "MARIANITO"
+        },
+        "eu": {
+          "name": "MARIANITO"
+        },
+        "en": {
+          "name": "MARIANITO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "MARIANITO"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 2.4
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "aperitivos-003": {
+      "id": "aperitivos-003",
+      "slug": "vermu-preparado-050",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "VERMÚ (Preparado +0.50€)"
+        },
+        "eu": {
+          "name": "VERMÚ (Preparado +0.50€)"
+        },
+        "en": {
+          "name": "VERMOUTH (with +0.50€)",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "VERMOUTH (avec +0.50€)"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "aperitivos-004": {
+      "id": "aperitivos-004",
+      "slug": "con-cava-campari-o-gin",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CON CAVA, CAMPARI O GIN"
+        },
+        "eu": {
+          "name": "CON CAVA, CAMPARI O GIN"
+        },
+        "en": {
+          "name": "WITH CAVA, CAMPARI OR GIN",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "AVEC CAVA, CAMPARI OU GIN"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 0.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "aperitivos-005": {
+      "id": "aperitivos-005",
+      "slug": "bitter-cinzano",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "BITTER CINZANO"
+        },
+        "eu": {
+          "name": "BITTER CINZANO"
+        },
+        "en": {
+          "name": "BITTER CINZANO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BITTER CINZANO"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.2
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "aperitivos-006": {
+      "id": "aperitivos-006",
+      "slug": "copa-campari",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "COPA CAMPARI"
+        },
+        "eu": {
+          "name": "COPA CAMPARI"
+        },
+        "en": {
+          "name": "COPA CAMPARI",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "COPA CAMPARI"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "aperitivos-007": {
+      "id": "aperitivos-007",
+      "slug": "ricard",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "RICARD"
+        },
+        "eu": {
+          "name": "RICARD"
+        },
+        "en": {
+          "name": "RICARD",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "RICARD"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 3.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "aperitivos-008": {
+      "id": "aperitivos-008",
+      "slug": "moscatel",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "MOSCATEL"
+        },
+        "eu": {
+          "name": "MOSCATEL"
+        },
+        "en": {
+          "name": "MOSCATEL",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "MOSCATEL"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 2.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    "aperitivos-009": {
+      "id": "aperitivos-009",
+      "slug": "finos",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "FINOS"
+        },
+        "eu": {
+          "name": "FINOS"
+        },
+        "en": {
+          "name": "FINOS",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "FINOS"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 2.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    "aperitivos-010": {
+      "id": "aperitivos-010",
+      "slug": "la-guita",
+      "categoryId": "aperitivos",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "LA GUITA"
+        },
+        "eu": {
+          "name": "LA GUITA"
+        },
+        "en": {
+          "name": "LA GUITA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "LA GUITA"
+        }
+      },
+      "pricing": {
+        "type": "small-large",
+        "currency": "EUR",
+        "values": {
+          "small": 2.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    "copas-licores-001": {
+      "id": "copas-licores-001",
+      "slug": "anis-o-conac",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ANIS O COÑAC"
+        },
+        "eu": {
+          "name": "Anisa edo Koniaka"
+        },
+        "en": {
+          "name": "Anise or Cognac",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Anis ou Cognac"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.3
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "copas-licores-002": {
+      "id": "copas-licores-002",
+      "slug": "marie-brizard",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "MARIE BRIZARD"
+        },
+        "eu": {
+          "name": "Marie Brizard"
+        },
+        "en": {
+          "name": "Marie Brizard",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Marie Brizard"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "copas-licores-003": {
+      "id": "copas-licores-003",
+      "slug": "magno",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "MAGNO"
+        },
+        "eu": {
+          "name": "Magno"
+        },
+        "en": {
+          "name": "Magno",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Magno"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.8
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "copas-licores-004": {
+      "id": "copas-licores-004",
+      "slug": "orujo-de-hierbas",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "ORUJO DE HIERBAS"
+        },
+        "eu": {
+          "name": "Orujoa Errezumatuekin"
+        },
+        "en": {
+          "name": "Herb Infused Aguardiente",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "Orujo aux herbes"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "copas-licores-005": {
+      "id": "copas-licores-005",
+      "slug": "txupito-bailey-slicor43cointreau",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "TXUPITO BAILEY´S/LICOR43/COINTREAU"
+        },
+        "eu": {
+          "name": "TXUPITO BAILEY´S/LICOR43/COINTREAU"
+        },
+        "en": {
+          "name": "TXUPITO BAILEY´S/LICOR43/COINTREAU",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "TXUPITO BAILEY´S/LICOR43/COINTREAU"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 2.8
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "copas-licores-006": {
+      "id": "copas-licores-006",
+      "slug": "txupito-de-hierbascafeblanco",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "TXUPITO DE HIERBAS/CAFÉ/BLANCO"
+        },
+        "eu": {
+          "name": "TXUPITO DE HIERBAS/CAFÉ/BLANCO"
+        },
+        "en": {
+          "name": "TXUPITO DE HIERBAS/CAFÉ/BLANCO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "TXUPITO DE HIERBAS/CAFÉ/BLANCO"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 2.6
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 6
+    },
+    "copas-licores-007": {
+      "id": "copas-licores-007",
+      "slug": "txupito-pacharan",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "TXUPITO PACHARAN"
+        },
+        "eu": {
+          "name": "TXUPITO PACHARAN"
+        },
+        "en": {
+          "name": "TXUPITO PACHARAN",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "TXUPITO PACHARAN"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 2.6
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 7
+    },
+    "copas-licores-008": {
+      "id": "copas-licores-008",
+      "slug": "txupito-anis-o-conac",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "TXUPITO ANIS O COÑAC"
+        },
+        "eu": {
+          "name": "TXUPITO ANIS O COÑAC"
+        },
+        "en": {
+          "name": "TXUPITO ANIS O COÑAC",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "TXUPITO ANIS O COÑAC"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 2.7
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 8
+    },
+    "copas-licores-009": {
+      "id": "copas-licores-009",
+      "slug": "txupito-magno",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "TXUPITO MAGNO"
+        },
+        "eu": {
+          "name": "TXUPITO MAGNO"
+        },
+        "en": {
+          "name": "TXUPITO MAGNO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "TXUPITO MAGNO"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 2.8
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 9
+    },
+    "copas-licores-010": {
+      "id": "copas-licores-010",
+      "slug": "txupito-whisky",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "TXUPITO WHISKY"
+        },
+        "eu": {
+          "name": "TXUPITO WHISKY"
+        },
+        "en": {
+          "name": "TXUPITO WHISKY",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "TXUPITO WHISKY"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.8
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 10
+    },
+    "copas-licores-011": {
+      "id": "copas-licores-011",
+      "slug": "bailey-s",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "BAILEY´S"
+        },
+        "eu": {
+          "name": "BAILEY´S"
+        },
+        "en": {
+          "name": "BAILEY´S",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BAILEY´S"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 4.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 11
+    },
+    "copas-licores-012": {
+      "id": "copas-licores-012",
+      "slug": "patxaran",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "PATXARAN"
+        },
+        "eu": {
+          "name": "PATXARAN"
+        },
+        "en": {
+          "name": "PATXARAN",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "PATXARAN"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 12
+    },
+    "copas-licores-013": {
+      "id": "copas-licores-013",
+      "slug": "jack-daniels",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "JACK DANIELS"
+        },
+        "eu": {
+          "name": "JACK DANIELS"
+        },
+        "en": {
+          "name": "JACK DANIELS",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "JACK DANIELS"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.0,
+          "large": 5.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 13
+    },
+    "copas-licores-014": {
+      "id": "copas-licores-014",
+      "slug": "cardhu",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CARDHU"
+        },
+        "eu": {
+          "name": "CARDHU"
+        },
+        "en": {
+          "name": "CARDHU",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CARDHU"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.9,
+          "large": 5.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 14
+    },
+    "copas-licores-015": {
+      "id": "copas-licores-015",
+      "slug": "red-label",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "RED LABEL"
+        },
+        "eu": {
+          "name": "RED LABEL"
+        },
+        "en": {
+          "name": "RED LABEL",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "RED LABEL"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.1,
+          "large": 4.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 15
+    },
+    "copas-licores-016": {
+      "id": "copas-licores-016",
+      "slug": "black-label",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "BLACK LABEL"
+        },
+        "eu": {
+          "name": "BLACK LABEL"
+        },
+        "en": {
+          "name": "BLACK LABEL",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "BLACK LABEL"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.9,
+          "large": 5.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 16
+    },
+    "copas-licores-017": {
+      "id": "copas-licores-017",
+      "slug": "soberano",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "SOBERANO"
+        },
+        "eu": {
+          "name": "SOBERANO"
+        },
+        "en": {
+          "name": "SOBERANO",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "SOBERANO"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 2.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 17
+    },
+    "copas-licores-018": {
+      "id": "copas-licores-018",
+      "slug": "carlos-i",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CARLOS I"
+        },
+        "eu": {
+          "name": "CARLOS I"
+        },
+        "en": {
+          "name": "CARLOS I",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CARLOS I"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.9,
+          "large": 5.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 18
+    },
+    "copas-licores-019": {
+      "id": "copas-licores-019",
+      "slug": "chivas",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "CHIVAS"
+        },
+        "eu": {
+          "name": "CHIVAS"
+        },
+        "en": {
+          "name": "CHIVAS",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "CHIVAS"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.5,
+          "large": 5.7
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 19
+    },
+    "copas-licores-020": {
+      "id": "copas-licores-020",
+      "slug": "jaggermaister-tequila",
+      "categoryId": "copas-licores",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "JAGGERMAISTER / TEQUILA"
+        },
+        "eu": {
+          "name": "JAGGERMAISTER / TEQUILA"
+        },
+        "en": {
+          "name": "JAGGERMAISTER / TEQUILA",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "JAGGERMAISTER / TEQUILA"
+        }
+      },
+      "pricing": {
+        "type": "dual",
+        "currency": "EUR",
+        "values": {
+          "single": 3.0,
+          "large": 4.9
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 20
+    },
+    "combinados-001": {
+      "id": "combinados-001",
+      "slug": "combinados-seleccion",
+      "categoryId": "combinados",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "COMBINADOS SELECCIÓN"
+        },
+        "eu": {
+          "name": "Combinatu hautapenak"
+        },
+        "en": {
+          "name": "SELECTED COMBINATIONS",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "COMBINAISONS SÉLECTIONNÉES"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 8.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "combinados-002": {
+      "id": "combinados-002",
+      "slug": "combinados-premium",
+      "categoryId": "combinados",
+      "mainSectionId": "bebidas",
+      "translations": {
+        "es": {
+          "name": "COMBINADOS PREMIUM"
+        },
+        "eu": {
+          "name": "Combinatu hautaketa"
+        },
+        "en": {
+          "name": "PREMIUM COMBINATIONS",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "COMBINAISONS PREMIUM"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 9.0
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    }
+  },
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdated": "2026-03-26T15:32:57.555552",
+    "languages": ["es", "eu", "en", "fr"],
+    "defaultLanguage": "es",
+    "restaurantInfo": {
+      "name": "Bar Cachón",
+      "website": "https://barcachon.com"
+    }
+  }
+}

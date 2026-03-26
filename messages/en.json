@@ -1,0 +1,64 @@
+{
+  "common": {
+    "back": "Back",
+    "terraceSupplement": "(Only on the ground floor)"
+  },
+  "nav": {
+    "menu": "Menu",
+    "drinks": "Drinks",
+    "dailyMenu": "Daily Menu",
+    "languages": "Languages"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "food": "Food",
+    "drinks": "Drinks"
+  },
+  "categories": {
+    "pintxos-picar": "PINTXOS/APPETIZERS",
+    "hamburguesas-sandwiches": "BURGERS/SANDWICHES",
+    "tostas": "TOASTS",
+    "platos-ensaladas": "COMBO DISHES/SALADS",
+    "postres": "DESSERTS",
+    "cafes": "COFFEES",
+    "refrescos": "SOFT DRINKS",
+    "copas-licores": "COCKTAILS/LIQUORS",
+    "aperitivos": "APERITIFS",
+    "vinos": "WINES",
+    "cervezas": "BEERS"
+  },
+  "sections": {
+    "para-picar": "Appetizers",
+    "pintxos": "Pintxos",
+    "brochetas": "Skewers",
+    "para-compartir": "Sharing Plates",
+    "tostadas": "Toasts",
+    "tostadas-new": "NEW!",
+    "sandwiches": "Sandwiches",
+    "hamburguesas": "Burgers",
+    "hamburguesas-subtitle": "(100% txuleta meat with fresh fries)",
+    "ensaladas": "Salads",
+    "bocadillos": "Sandwiches",
+    "platos-combinados": "Combo Dishes",
+    "menu-del-dia": "Daily Menu",
+    "menu-infantil": "Kids Menu",
+    "postres": "Desserts",
+    "vinos": "Wines",
+    "aperitivos": "Aperitifs",
+    "refrescos": "Soft Drinks",
+    "cervezas": "Beers",
+    "copas": "Cocktails",
+    "cafes": "Coffees",
+    "combinados-licores": "Cocktails & Liquors"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "login": "Login",
+    "logout": "Logout",
+    "username": "Username",
+    "password": "Password",
+    "dashboard": "Dashboard",
+    "editMenu": "Edit Menu",
+    "saveChanges": "Save Changes"
+  }
+}

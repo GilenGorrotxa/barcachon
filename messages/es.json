@@ -1,0 +1,64 @@
+{
+  "common": {
+    "back": "Volver",
+    "terraceSupplement": "(Sólo en la planta baja)"
+  },
+  "nav": {
+    "menu": "Carta",
+    "drinks": "Bebidas",
+    "dailyMenu": "Menú",
+    "languages": "Idiomas"
+  },
+  "menu": {
+    "title": "Nuestra Carta",
+    "food": "Comida",
+    "drinks": "Bebidas"
+  },
+  "categories": {
+    "pintxos-picar": "PINTXOS/PARA PICAR",
+    "hamburguesas-sandwiches": "HAMBURGUESAS/SANDWICHES",
+    "tostas": "TOSTAS",
+    "platos-ensaladas": "PLATOS COMBINADOS/ENSALADAS",
+    "postres": "POSTRES",
+    "cafes": "CAFÉS",
+    "refrescos": "REFRESCOS",
+    "copas-licores": "COPAS/LICORES",
+    "aperitivos": "APERITIVOS",
+    "vinos": "VINOS",
+    "cervezas": "CERVEZAS"
+  },
+  "sections": {
+    "para-picar": "Para Picar",
+    "pintxos": "Pintxos",
+    "brochetas": "Brochetas",
+    "para-compartir": "Para Compartir",
+    "tostadas": "Tostas",
+    "tostadas-new": "NUEVO!",
+    "sandwiches": "Sandwiches",
+    "hamburguesas": "Hamburguesas",
+    "hamburguesas-subtitle": "(100% carne de txuleta acompañadas de patatas caseras)",
+    "ensaladas": "Ensaladas",
+    "bocadillos": "Bocadillos",
+    "platos-combinados": "Platos Combinados",
+    "menu-del-dia": "Menú del Día",
+    "menu-infantil": "Menú Infantil",
+    "postres": "Postres",
+    "vinos": "Vinos",
+    "aperitivos": "Aperitivos",
+    "refrescos": "Refrescos",
+    "cervezas": "Cervezas",
+    "copas": "Copas",
+    "cafes": "Cafés",
+    "combinados-licores": "Combinados y Licores"
+  },
+  "admin": {
+    "title": "Panel de Administración",
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión",
+    "username": "Usuario",
+    "password": "Contraseña",
+    "dashboard": "Dashboard",
+    "editMenu": "Editar Menú",
+    "saveChanges": "Guardar Cambios"
+  }
+}

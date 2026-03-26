@@ -1,0 +1,74 @@
+import { getTranslations } from "next-intl/server";
+import { CategoryButton } from "@/components/CategoryButton";
+import menuData from "@/lib/menu-data.json";
+import type { MenuData } from "@/lib/types/menu.types";
+
+export default async function CartaPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations("categories");
+
+  const data = menuData as unknown as MenuData;
+  const cartaSection = data.navigation.mainSections.find(
+    (s) => s.id === "carta",
+  );
+
+  if (!cartaSection) {
+    return <div>Sección no encontrada</div>;
+  }
+
+  // Agrupar categorías según el diseño real
+  const categoryGroups = [
+    {
+      id: "pintxos-picar",
+      title: t("pintxos-picar"),
+      categories: ["pintxos", "para-picar", "brochetas", "para-compartir"],
+      targetCategory: "pintxos",
+    },
+    {
+      id: "hamburguesas-sandwiches",
+      title: t("hamburguesas-sandwiches"),
+      categories: ["sandwiches", "hamburguesas", "tostadas", "bocadillos"],
+      targetCategory: "sandwiches",
+    },
+    {
+      id: "platos-ensaladas",
+      title: t("platos-ensaladas"),
+      categories: ["platos-combinados", "ensaladas"],
+      targetCategory: "platos-combinados",
+    },
+  ];
+
+  return (
+    <main className="min-h-screen w-full justify-center items-center flex-col py-8 px-16 max-w-md mx-auto">
+      <div className="flex flex-col justify-center">
+        {categoryGroups.map((group) => {
+          const groupCategories = cartaSection.categories.filter((cat) =>
+            group.categories.includes(cat.id),
+          );
+
+          if (groupCategories.length === 0) return null;
+
+          // Usar la categoría objetivo definida en el grupo
+          const targetCategory = groupCategories.find(
+            (cat) => cat.id === group.targetCategory,
+          );
+
+          if (!targetCategory) return null;
+
+          return (
+            <div key={group.id} className="mb-4">
+              <CategoryButton
+                href={`/${locale}/menu/${targetCategory.id}`}
+                title={group.title}
+              />
+            </div>
+          );
+        })}
+      </div>
+    </main>
+  );
+}

@@ -16,10 +16,10 @@ export async function GET(request: NextRequest) {
   try {
     // En producción con Blob
     if (isUsingBlob()) {
-      // Obtener la URL más reciente del blob usando list()
+      // Obtener la lista de blobs ordenada por fecha de subida (más reciente primero)
       const { blobs } = await list({
         prefix: BLOB_FILENAME,
-        limit: 1,
+        limit: 10,
       });
 
       if (blobs.length === 0) {
@@ -29,14 +29,27 @@ export async function GET(request: NextRequest) {
         const menuData = JSON.parse(fileContent);
         return NextResponse.json(menuData, {
           headers: {
-            "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
+            "Cache-Control": "public, s-maxage=30, stale-while-revalidate=60",
           },
         });
       }
 
-      const blobUrl = blobs[0].url;
+      // Ordenar por fecha de subida descendente (más reciente primero)
+      const sortedBlobs = blobs.sort(
+        (a, b) =>
+          new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime(),
+      );
 
-      const response = await fetch(blobUrl, {
+      const blobUrl = sortedBlobs[0].url;
+
+      console.log(`📥 API Pública - Leyendo blob más reciente: ${blobUrl}`);
+      console.log(`📅 Subido en: ${sortedBlobs[0].uploadedAt}`);
+
+      // Añadir timestamp para evitar cache del navegador
+      const timestamp = Date.now();
+      const urlWithCacheBuster = `${blobUrl}?t=${timestamp}`;
+
+      const response = await fetch(urlWithCacheBuster, {
         cache: "no-store",
         headers: {
           "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -56,7 +69,7 @@ export async function GET(request: NextRequest) {
       // Cache público corto para balance entre performance y actualización
       return NextResponse.json(menuData, {
         headers: {
-          "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
+          "Cache-Control": "public, s-maxage=30, stale-while-revalidate=60",
         },
       });
     }

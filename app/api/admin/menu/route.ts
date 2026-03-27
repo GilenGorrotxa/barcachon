@@ -31,10 +31,10 @@ export async function GET(request: NextRequest) {
   try {
     // En producción con Blob
     if (isUsingBlob()) {
-      // Obtener la URL más reciente del blob usando list()
+      // Obtener la lista de blobs ordenada por fecha de subida (más reciente primero)
       const { blobs } = await list({
         prefix: BLOB_FILENAME,
-        limit: 1,
+        limit: 10, // Aumentar para ver todos los archivos
       });
 
       if (blobs.length === 0) {
@@ -43,9 +43,22 @@ export async function GET(request: NextRequest) {
         );
       }
 
-      const blobUrl = blobs[0].url;
+      // Ordenar por fecha de subida descendente (más reciente primero)
+      const sortedBlobs = blobs.sort(
+        (a, b) =>
+          new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime(),
+      );
 
-      const response = await fetch(blobUrl, {
+      const blobUrl = sortedBlobs[0].url;
+
+      console.log(`📥 Leyendo blob más reciente: ${blobUrl}`);
+      console.log(`📅 Subido en: ${sortedBlobs[0].uploadedAt}`);
+
+      // Añadir timestamp para evitar cache del navegador
+      const timestamp = Date.now();
+      const urlWithCacheBuster = `${blobUrl}?t=${timestamp}`;
+
+      const response = await fetch(urlWithCacheBuster, {
         cache: "no-store",
         headers: {
           "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -56,7 +69,13 @@ export async function GET(request: NextRequest) {
 
       if (response.ok) {
         const menuData = await response.json();
-        return NextResponse.json(menuData);
+        return NextResponse.json(menuData, {
+          headers: {
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            Pragma: "no-cache",
+            Expires: "0",
+          },
+        });
       }
 
       throw new Error(
@@ -67,7 +86,11 @@ export async function GET(request: NextRequest) {
     // Desarrollo: leer archivo local
     const fileContent = await fs.readFile(LOCAL_MENU_DATA_PATH, "utf-8");
     const menuData = JSON.parse(fileContent);
-    return NextResponse.json(menuData);
+    return NextResponse.json(menuData, {
+      headers: {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+      },
+    });
   } catch (error) {
     console.error("Error al leer menu-data:", error);
     return NextResponse.json(
@@ -97,10 +120,11 @@ export async function PUT(request: NextRequest) {
       const blob = await put(BLOB_FILENAME, jsonString, {
         access: "public",
         addRandomSuffix: false,
-        allowOverwrite: true,
+        cacheControlMaxAge: 0, // No cachear
       });
 
       console.log("✅ Blob guardado:", blob.url);
+      console.log("📅 Timestamp:", new Date().toISOString());
 
       // Revalidar todas las rutas que dependen del menú
       revalidatePath("/[locale]", "layout");
@@ -108,6 +132,8 @@ export async function PUT(request: NextRequest) {
       revalidatePath("/[locale]/menu/[category]", "page");
       revalidatePath("/[locale]/daily-menu", "page");
       revalidatePath("/[locale]/drinks", "page");
+      revalidatePath("/api/menu");
+      revalidatePath("/api/admin/menu");
 
       console.log("🔄 Rutas revalidadas");
 
@@ -115,6 +141,7 @@ export async function PUT(request: NextRequest) {
         success: true,
         message: "Datos guardados correctamente en Vercel Blob",
         blobUrl: blob.url,
+        timestamp: new Date().toISOString(),
       });
     } else {
       // Desarrollo: guardar en archivo local

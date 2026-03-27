@@ -1,10 +1,23 @@
 import { notFound } from "next/navigation";
 import { MenuItemCard } from "@/components/MenuItemCard";
 import { CategoryButton } from "@/components/CategoryButton";
-import menuData from "@/lib/menu-data.json";
 import type { MenuData, Locale } from "@/lib/types/menu.types";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+
+// Función para obtener datos dinámicamente
+async function getMenuData(): Promise<MenuData> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/menu`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch menu data");
+  }
+
+  return res.json();
+}
 
 export default async function CategoryPage({
   params,
@@ -12,7 +25,7 @@ export default async function CategoryPage({
   params: Promise<{ locale: string; category: string }>;
 }) {
   const { locale, category: categoryId } = await params;
-  const data = menuData as unknown as MenuData;
+  const data = await getMenuData();
   const t = await getTranslations("sections");
   const tCommon = await getTranslations("common");
 
@@ -111,7 +124,7 @@ export default async function CategoryPage({
 
 // Generar rutas estáticas para todas las categorías
 export async function generateStaticParams() {
-  const data = menuData as unknown as MenuData;
+  const data = await getMenuData();
   const params: { locale: string; category: string }[] = [];
 
   const locales = ["es", "eu", "en", "fr"];

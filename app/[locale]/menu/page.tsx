@@ -1,9 +1,20 @@
 import { getTranslations } from "next-intl/server";
-import {
-  getMenuData,
-  getCategoriesByType,
-  getItemsByCategory,
-} from "@/lib/utils";
+import type { MenuData } from "@/lib/types/menu.types";
+import { getCategoriesByType, getItemsByCategory } from "@/lib/menu-utils";
+
+// Función para obtener datos dinámicamente
+async function getMenuData(): Promise<MenuData> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/menu`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch menu data");
+  }
+
+  return res.json();
+}
 import { CategorySection } from "@/components/CategorySection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import Link from "next/link";
@@ -18,8 +29,8 @@ export default async function MenuPage({
 
   const t = await getTranslations();
 
-  const foodCategories = getCategoriesByType("food");
-  const menuData = getMenuData();
+  const menuData = await getMenuData();
+  const foodCategories = getCategoriesByType(menuData, "food");
 
   // Categorías principales para navegación rápida
   const mainCategories = [
@@ -77,7 +88,7 @@ export default async function MenuPage({
                 ].includes(cat.id),
               )
               .map((category) => {
-                const items = getItemsByCategory(category.id);
+                const items = getItemsByCategory(menuData, category.id);
                 return (
                   <CategorySection
                     key={category.id}
@@ -103,7 +114,7 @@ export default async function MenuPage({
                 ].includes(cat.id),
               )
               .map((category) => {
-                const items = getItemsByCategory(category.id);
+                const items = getItemsByCategory(menuData, category.id);
                 const subtitle =
                   category.id === "hamburguesas"
                     ? t("sections.hamburguesas-subtitle")
@@ -129,7 +140,7 @@ export default async function MenuPage({
                 ["ensaladas", "platos-combinados", "postres"].includes(cat.id),
               )
               .map((category) => {
-                const items = getItemsByCategory(category.id);
+                const items = getItemsByCategory(menuData, category.id);
                 return (
                   <CategorySection
                     key={category.id}

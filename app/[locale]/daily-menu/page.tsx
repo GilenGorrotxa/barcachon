@@ -1,7 +1,19 @@
 import { getTranslations } from "next-intl/server";
-import menuData from "@/lib/menu-data.json";
 import type { MenuData, Locale } from "@/lib/types/menu.types";
 
+// Función para obtener datos dinámicamente
+async function getMenuData(): Promise<MenuData> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/menu`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch menu data");
+  }
+
+  return res.json();
+}
 export default async function DailyMenuPage({
   params,
 }: {
@@ -10,7 +22,7 @@ export default async function DailyMenuPage({
   const { locale } = await params;
   const t = await getTranslations("common");
 
-  const data = menuData as unknown as MenuData;
+  const data = await getMenuData();
   const menuSection = data.navigation.mainSections.find((s) => s.id === "menu");
 
   if (!menuSection) {

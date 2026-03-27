@@ -1,7 +1,20 @@
 import { getTranslations } from "next-intl/server";
 import { CategoryButton } from "@/components/CategoryButton";
-import menuData from "@/lib/menu-data.json";
 import type { MenuData } from "@/lib/types/menu.types";
+
+// Función para obtener datos dinámicamente
+async function getMenuData(): Promise<MenuData> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/menu`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch menu data");
+  }
+
+  return res.json();
+}
 
 export default async function CartaPage({
   params,
@@ -11,7 +24,7 @@ export default async function CartaPage({
   const { locale } = await params;
   const t = await getTranslations("categories");
 
-  const data = menuData as unknown as MenuData;
+  const data = await getMenuData();
   const cartaSection = data.navigation.mainSections.find(
     (s) => s.id === "carta",
   );

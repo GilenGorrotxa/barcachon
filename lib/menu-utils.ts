@@ -77,6 +77,30 @@ export function getMainSectionById(
 }
 
 /**
+ * Obtiene categorías por tipo
+ */
+export function getCategoriesByType(
+  menuData: MenuData,
+  type: "food" | "drink" | "daily-menu",
+) {
+  const sections = menuData.navigation.mainSections.filter(
+    (section) => section.type === type,
+  );
+
+  const categories: (Category & { type: "food" | "drink" | "daily-menu" })[] =
+    [];
+  sections.forEach((section) => {
+    const categoriesWithType = section.categories.map((cat) => ({
+      ...cat,
+      type: section.type,
+    }));
+    categories.push(...categoriesWithType);
+  });
+
+  return categories.sort((a, b) => a.order - b.order);
+}
+
+/**
  * Obtiene items destacados
  */
 export function getFeaturedItems(menuData: MenuData): MenuItem[] {

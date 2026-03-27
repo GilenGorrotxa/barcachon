@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { put, list } from "@vercel/blob";
 import { promises as fs } from "fs";
 import path from "path";
+import { revalidatePath } from "next/cache";
 import { validateAdminToken } from "@/lib/admin-auth";
 
 const BLOB_FILENAME = "menu-data.json";
@@ -101,6 +102,15 @@ export async function PUT(request: NextRequest) {
 
       console.log("✅ Blob guardado:", blob.url);
 
+      // Revalidar todas las rutas que dependen del menú
+      revalidatePath("/[locale]", "layout");
+      revalidatePath("/[locale]/menu", "page");
+      revalidatePath("/[locale]/menu/[category]", "page");
+      revalidatePath("/[locale]/daily-menu", "page");
+      revalidatePath("/[locale]/drinks", "page");
+
+      console.log("🔄 Rutas revalidadas");
+
       return NextResponse.json({
         success: true,
         message: "Datos guardados correctamente en Vercel Blob",
@@ -113,6 +123,15 @@ export async function PUT(request: NextRequest) {
       await fs.writeFile(LOCAL_MENU_DATA_PATH, jsonString, "utf-8");
 
       console.log("✅ Archivo local guardado");
+
+      // Revalidar todas las rutas que dependen del menú
+      revalidatePath("/[locale]", "layout");
+      revalidatePath("/[locale]/menu", "page");
+      revalidatePath("/[locale]/menu/[category]", "page");
+      revalidatePath("/[locale]/daily-menu", "page");
+      revalidatePath("/[locale]/drinks", "page");
+
+      console.log("🔄 Rutas revalidadas");
 
       return NextResponse.json({
         success: true,

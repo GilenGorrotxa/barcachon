@@ -71,6 +71,7 @@ export async function PUT(request: NextRequest) {
       const blob = await put(BLOB_FILENAME, jsonString, {
         access: "public",
         addRandomSuffix: false,
+        allowOverwrite: true,
       });
 
       console.log("✅ Blob guardado exitosamente!");

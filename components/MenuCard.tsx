@@ -1,4 +1,5 @@
-import { MenuItem, Locale } from "@/lib/types";
+import { MenuItem } from "@/lib/types/menu.types";
+import type { Locale } from "@/lib/types";
 import { formatPrice, getItemTranslation } from "@/lib/utils";
 
 interface MenuCardProps {
@@ -10,7 +11,7 @@ export function MenuCard({ item, locale }: MenuCardProps) {
   const translation = getItemTranslation(item, locale);
 
   const renderPrice = () => {
-    const { unit, halfPortion, fullPortion, standard } = item.price;
+    const { unit, halfPortion, fullPortion, single } = item.pricing.values;
 
     if (unit && halfPortion && fullPortion) {
       return (
@@ -37,10 +38,10 @@ export function MenuCard({ item, locale }: MenuCardProps) {
       );
     }
 
-    if (standard) {
+    if (single) {
       return (
         <span className="text-right whitespace-nowrap">
-          {formatPrice(standard)}€
+          {formatPrice(single)}€
         </span>
       );
     }

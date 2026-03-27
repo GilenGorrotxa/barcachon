@@ -54,9 +54,14 @@ export function getCategoriesByType(type: "food" | "drink" | "daily-menu") {
     (section) => section.type === type,
   );
 
-  const categories: Category[] = [];
+  const categories: (Category & { type: "food" | "drink" | "daily-menu" })[] =
+    [];
   sections.forEach((section) => {
-    categories.push(...section.categories);
+    const categoriesWithType = section.categories.map((cat) => ({
+      ...cat,
+      type: section.type,
+    }));
+    categories.push(...categoriesWithType);
   });
 
   return categories.sort((a, b) => a.order - b.order);

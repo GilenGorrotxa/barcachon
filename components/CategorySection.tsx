@@ -1,6 +1,7 @@
 "use client";
 
-import { MenuItem, Locale, MenuCategory } from "@/lib/types";
+import { MenuItem, Category } from "@/lib/types/menu.types";
+import type { Locale } from "@/lib/types";
 import {
   formatPrice,
   getItemTranslation,
@@ -9,7 +10,7 @@ import {
 import { MenuCard } from "./MenuCard";
 
 interface CategorySectionProps {
-  category: MenuCategory;
+  category: Category & { type: "food" | "drink" | "daily-menu" };
   items: MenuItem[];
   locale: Locale;
   showSubtitle?: string;

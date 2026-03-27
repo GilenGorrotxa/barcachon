@@ -65,7 +65,7 @@ export default async function CategoryPage({
         {categoriesToShow.map((cat) => {
           const items = cat.itemIds
             .map((id) => data.items[id])
-            .filter(Boolean)
+            .filter((item) => item && item.available) // Solo items disponibles
             .sort((a, b) => a.order - b.order);
 
           if (items.length === 0) return null;

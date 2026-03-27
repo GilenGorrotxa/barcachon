@@ -39,11 +39,33 @@ export function getCategoryItems(categoryId: string) {
 
   return category.itemIds
     .map((id) => data.items[id])
-    .filter(Boolean)
+    .filter((item) => item && item.available) // Solo items disponibles
     .sort((a, b) => a.order - b.order);
 }
 
 export function getMainSectionCategories(sectionId: string) {
   const section = getMainSection(sectionId);
   return section?.categories || [];
+}
+
+export function getCategoriesByType(type: "food" | "drink" | "daily-menu") {
+  const data = getMenuData();
+  const sections = data.navigation.mainSections.filter(
+    (section) => section.type === type,
+  );
+
+  const categories: Category[] = [];
+  sections.forEach((section) => {
+    categories.push(...section.categories);
+  });
+
+  return categories.sort((a, b) => a.order - b.order);
+}
+
+export function getItemsByCategory(categoryId: string) {
+  const data = getMenuData();
+
+  return Object.values(data.items)
+    .filter((item) => item.categoryId === categoryId && item.available) // Solo items disponibles
+    .sort((a, b) => a.order - b.order);
 }

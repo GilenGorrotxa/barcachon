@@ -35,6 +35,14 @@ export default async function DailyMenuPage({
       .filter(Boolean)
       .sort((a, b) => a.order - b.order) || [];
 
+  // Separar primeros y segundos platos
+  const primerosPlatos = menuDelDiaItems.filter(
+    (item) => item.courseType === "primeros",
+  );
+  const segundosPlatos = menuDelDiaItems.filter(
+    (item) => item.courseType === "segundos",
+  );
+
   const postresItems =
     postresCategory?.itemIds
       .map((id) => data.items[id])
@@ -49,16 +57,18 @@ export default async function DailyMenuPage({
           {labels.firstCourses}
         </h2>
         <div className="bg-white border border-gray-300 mb-8">
-          {menuDelDiaItems.map((item, index) => (
-            <div
-              key={`primero-${item.id}`}
-              className={`py-3 px-6 ${index < menuDelDiaItems.length - 1 ? "border-b border-gray-300" : ""}`}
-            >
-              <p className="text-center text-black font-normal text-base">
-                {item.translations[locale as Locale]?.name || ""}
-              </p>
-            </div>
-          ))}
+          {primerosPlatos
+            .filter((item) => item.available)
+            .map((item, index) => (
+              <div
+                key={`primero-${item.id}`}
+                className={`py-3 px-6 ${index < primerosPlatos.filter((i) => i.available).length - 1 ? "border-b border-gray-300" : ""}`}
+              >
+                <p className="text-center text-black font-normal text-base">
+                  {item.translations[locale as Locale]?.name || ""}
+                </p>
+              </div>
+            ))}
         </div>
 
         {/* SEGUNDOS PLATOS */}
@@ -66,16 +76,18 @@ export default async function DailyMenuPage({
           {labels.secondCourses}
         </h2>
         <div className="bg-white border border-gray-300 mb-8">
-          {menuDelDiaItems.map((item, index) => (
-            <div
-              key={`segundo-${item.id}`}
-              className={`py-3 px-6 ${index < menuDelDiaItems.length - 1 ? "border-b border-gray-300" : ""}`}
-            >
-              <p className="text-center text-black font-normal text-base">
-                {item.translations[locale as Locale]?.description || ""}
-              </p>
-            </div>
-          ))}
+          {segundosPlatos
+            .filter((item) => item.available)
+            .map((item, index) => (
+              <div
+                key={`segundo-${item.id}`}
+                className={`py-3 px-6 ${index < segundosPlatos.filter((i) => i.available).length - 1 ? "border-b border-gray-300" : ""}`}
+              >
+                <p className="text-center text-black font-normal text-base">
+                  {item.translations[locale as Locale]?.name || ""}
+                </p>
+              </div>
+            ))}
         </div>
 
         {/* POSTRE */}

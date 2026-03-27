@@ -34,7 +34,7 @@ export function getItemsByCategory(
   categoryId: string,
 ): MenuItem[] {
   return Object.values(menuData.items)
-    .filter((item) => item.categoryId === categoryId)
+    .filter((item) => item.categoryId === categoryId && item.available)
     .sort((a, b) => a.order - b.order);
 }
 
@@ -46,7 +46,7 @@ export function getItemsByMainSection(
   mainSectionId: string,
 ): MenuItem[] {
   return Object.values(menuData.items)
-    .filter((item) => item.mainSectionId === mainSectionId)
+    .filter((item) => item.mainSectionId === mainSectionId && item.available)
     .sort((a, b) => a.order - b.order);
 }
 

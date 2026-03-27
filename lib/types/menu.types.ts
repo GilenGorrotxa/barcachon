@@ -73,6 +73,7 @@ export interface MenuItem {
   slug: string; // 'cachoncitos'
   categoryId: string; // Referencia a categoría
   mainSectionId: string; // Referencia a sección principal
+  courseType?: string; // 'primeros' | 'segundos' (solo para menú del día)
   translations: MultiLangItem;
   pricing: PricingConfig;
   options?: ItemOption[]; // Extras opcionales (+0.50€)

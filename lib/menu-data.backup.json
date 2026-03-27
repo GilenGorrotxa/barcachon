@@ -58,7 +58,10 @@
               "en": "Skewers",
               "fr": "Brochettes"
             },
-            "itemIds": ["brochetas-001", "brochetas-002"]
+            "itemIds": [
+              "brochetas-001",
+              "brochetas-002"
+            ]
           },
           {
             "id": "para-compartir",
@@ -90,7 +93,7 @@
           {
             "id": "tostadas",
             "icon": "🍞",
-            "order": 5,
+            "order": 7,
             "translations": {
               "es": "Tostas",
               "eu": "Tostak",
@@ -107,7 +110,7 @@
           {
             "id": "sandwiches",
             "icon": "🥪",
-            "order": 6,
+            "order": 5,
             "translations": {
               "es": "Sandwiches",
               "eu": "Sandwiches",
@@ -124,7 +127,7 @@
           {
             "id": "hamburguesas",
             "icon": "🍔",
-            "order": 7,
+            "order": 6,
             "translations": {
               "es": "Hamburguesas",
               "eu": "Hanburgesak",
@@ -166,7 +169,7 @@
           {
             "id": "ensaladas",
             "icon": "🥗",
-            "order": 9,
+            "order": 10,
             "translations": {
               "es": "Ensaladas",
               "eu": "Entxaladak",
@@ -185,7 +188,7 @@
           {
             "id": "platos-combinados",
             "icon": "🍽️",
-            "order": 10,
+            "order": 9,
             "translations": {
               "es": "Platos Combinados",
               "eu": "Plater Konbinatuak",
@@ -394,7 +397,10 @@
               "en": "Mixed Drinks",
               "fr": "Combinés"
             },
-            "itemIds": ["combinados-001", "combinados-002"]
+            "itemIds": [
+              "combinados-001",
+              "combinados-002"
+            ]
           }
         ]
       },
@@ -421,11 +427,16 @@
               "fr": "Menu du Jour"
             },
             "itemIds": [
-              "menu-del-dia-001",
-              "menu-del-dia-002",
-              "menu-del-dia-003",
-              "menu-del-dia-004",
-              "menu-del-dia-005"
+              "menu-del-dia-primeros-001",
+              "menu-del-dia-primeros-002",
+              "menu-del-dia-primeros-003",
+              "menu-del-dia-primeros-004",
+              "menu-del-dia-primeros-005",
+              "menu-del-dia-segundos-001",
+              "menu-del-dia-segundos-002",
+              "menu-del-dia-segundos-003",
+              "menu-del-dia-segundos-004",
+              "menu-del-dia-segundos-005"
             ]
           },
           {
@@ -463,9 +474,481 @@
           }
         ]
       }
-    ]
+    ],
+    "dailyMenu": {
+      "price": 17.5
+    }
+  },
+  "menuConfig": {
+    "dailyMenu": {
+      "price": 17.5,
+      "labels": {
+        "es": {
+          "firstCourses": "PRIMEROS PLATOS",
+          "secondCourses": "SEGUNDOS PLATOS",
+          "desserts": "POSTRE",
+          "priceLabel": "PRECIO:"
+        },
+        "eu": {
+          "firstCourses": "LEHEN PLATERAK",
+          "secondCourses": "BIGARREN PLATERAK",
+          "desserts": "POSTREA",
+          "priceLabel": "PREZIOA:"
+        },
+        "en": {
+          "firstCourses": "FIRST COURSES",
+          "secondCourses": "SECOND COURSES",
+          "desserts": "DESSERT",
+          "priceLabel": "PRICE:"
+        },
+        "fr": {
+          "firstCourses": "PREMIERS PLATS",
+          "secondCourses": "PLATS PRINCIPAUX",
+          "desserts": "DESSERT",
+          "priceLabel": "PRIX:"
+        }
+      }
+    }
   },
   "items": {
+    "menu-del-dia-primeros-001": {
+      "id": "menu-del-dia-primeros-001",
+      "slug": "marmitako",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "primeros",
+      "translations": {
+        "es": {
+          "name": "MARMITAKOA"
+        },
+        "eu": {
+          "name": "MARMITAKO"
+        },
+        "en": {
+          "name": "MARMITAKO"
+        },
+        "fr": {
+          "name": "MARMITAKO"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "menu-del-dia-primeros-002": {
+      "id": "menu-del-dia-primeros-002",
+      "slug": "guisantes-con-jamon",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "primeros",
+      "translations": {
+        "es": {
+          "name": "GUISANTES con JAMÓN"
+        },
+        "eu": {
+          "name": "Ilarrak urdaiazpikoarekin"
+        },
+        "en": {
+          "name": "PEAS with HAM"
+        },
+        "fr": {
+          "name": "PETITS POIS au JAMBON"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "menu-del-dia-primeros-003": {
+      "id": "menu-del-dia-primeros-003",
+      "slug": "pastel-templado-de-mejillones",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "primeros",
+      "translations": {
+        "es": {
+          "name": "PASTEL templado de MEJILLONES"
+        },
+        "eu": {
+          "name": "MUSKUILU PILA Epela"
+        },
+        "en": {
+          "name": "WARM MUSSEL CAKE"
+        },
+        "fr": {
+          "name": "GÂTEAU TIÈDE de MOULES"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "menu-del-dia-primeros-004": {
+      "id": "menu-del-dia-primeros-004",
+      "slug": "desastre",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "primeros",
+      "translations": {
+        "es": {
+          "name": "\\\"DESASTRE\\\""
+        },
+        "eu": {
+          "name": "\\\"HONDAMENDIA\\\""
+        },
+        "en": {
+          "name": "\\\"DESASTRE\\\""
+        },
+        "fr": {
+          "name": "\\\"DESASTRE\\\""
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "menu-del-dia-primeros-005": {
+      "id": "menu-del-dia-primeros-005",
+      "slug": "ensalada-mixta",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "primeros",
+      "translations": {
+        "es": {
+          "name": "ENSALADA MIXTA"
+        },
+        "eu": {
+          "name": "ENTSALADA Mistoa"
+        },
+        "en": {
+          "name": "MIXED SALAD"
+        },
+        "fr": {
+          "name": "SALADE MIXTE"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "menu-del-dia-segundos-001": {
+      "id": "menu-del-dia-segundos-001",
+      "slug": "pescado-del-dia",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "segundos",
+      "translations": {
+        "es": {
+          "name": "PESCADO fresco del DÍA"
+        },
+        "eu": {
+          "name": "EGUNEKO ARRAIN Freskoa"
+        },
+        "en": {
+          "name": "FRESH FISH of the DAY"
+        },
+        "fr": {
+          "name": "POISSON frais du JOUR"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": false,
+      "featured": false,
+      "order": 1
+    },
+    "menu-del-dia-segundos-002": {
+      "id": "menu-del-dia-segundos-002",
+      "slug": "bacalao-ajoarriero",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "segundos",
+      "translations": {
+        "es": {
+          "name": "BACALAO AJOARRIERO"
+        },
+        "eu": {
+          "name": "BAKAILAO AJOARRIERO"
+        },
+        "en": {
+          "name": "COD AJOARRIERO"
+        },
+        "fr": {
+          "name": "MORUE AJOARRIERO"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "menu-del-dia-segundos-003": {
+      "id": "menu-del-dia-segundos-003",
+      "slug": "milanesas-lomo",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "segundos",
+      "translations": {
+        "es": {
+          "name": "MILANESAS de LOMO con GUARNICIÓN"
+        },
+        "eu": {
+          "name": "MILANESA DE LOMOA GAINERArekin"
+        },
+        "en": {
+          "name": "PORK LOIN MILANESE with GARNISH"
+        },
+        "fr": {
+          "name": "MILANAISE de LONGE avec GARNITURE"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "menu-del-dia-segundos-004": {
+      "id": "menu-del-dia-segundos-004",
+      "slug": "costilla-ternera",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "segundos",
+      "translations": {
+        "es": {
+          "name": "COSTILLA de TERNERA con PIMIENTOS verdes"
+        },
+        "eu": {
+          "name": "TXHALA SAHAIKI PIPER berdeekin"
+        },
+        "en": {
+          "name": "VEAL RIBS with GREEN PEPPERS"
+        },
+        "fr": {
+          "name": "CÔTES de VEAU aux POIVRONS verts"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
+    "menu-del-dia-segundos-005": {
+      "id": "menu-del-dia-segundos-005",
+      "slug": "filete-patatas",
+      "categoryId": "menu-del-dia",
+      "mainSectionId": "menu",
+      "courseType": "segundos",
+      "translations": {
+        "es": {
+          "name": "FILETE con PATATAS caseras (ENTRECÔTTE + 3 €)"
+        },
+        "eu": {
+          "name": "TXULLETA Etxeko PATATekin (ENTRECÔTTE + 3€)"
+        },
+        "en": {
+          "name": "STEAK with HOMEMADE POTATOES (ENTRECÔTTE + 3 €)"
+        },
+        "fr": {
+          "name": "FILET avec POMMES DE TERRE maison (ENTRECÔTTE + 3 €)"
+        }
+      },
+      "pricing": {
+        "type": "menu",
+        "currency": "EUR",
+        "values": {
+          "menu": 17.5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 5
+    },
+    "postres-001": {
+      "id": "postres-001",
+      "slug": "postres-caseros",
+      "categoryId": "postres",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "POSTRES CASEROS"
+        },
+        "eu": {
+          "name": "POSTRES KASEROAK"
+        },
+        "en": {
+          "name": "HOMEMADE DESSERTS",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "DESSERTS MAISON"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 1
+    },
+    "postres-002": {
+      "id": "postres-002",
+      "slug": "tartas-variadas",
+      "categoryId": "postres",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "TARTAS VARIADAS"
+        },
+        "eu": {
+          "name": "TARTA HAUSITAKOAK"
+        },
+        "en": {
+          "name": "VARIED PIES",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "TARTES VARIÉES"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 5
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 2
+    },
+    "postres-003": {
+      "id": "postres-003",
+      "slug": "yogur",
+      "categoryId": "postres",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "YOGUR"
+        },
+        "eu": {
+          "name": "JOGURTA"
+        },
+        "en": {
+          "name": "YOGURT",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "YAOURT"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 2
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 3
+    },
+    "postres-004": {
+      "id": "postres-004",
+      "slug": "tarrina-helado",
+      "categoryId": "postres",
+      "mainSectionId": "menu",
+      "translations": {
+        "es": {
+          "name": "TARRINA HELADO"
+        },
+        "eu": {
+          "name": "IHOZKO IZOZKIA"
+        },
+        "en": {
+          "name": "ICE CREAM CUP",
+          "description": "",
+          "extras": ""
+        },
+        "fr": {
+          "name": "POT DE GLACE"
+        }
+      },
+      "pricing": {
+        "type": "single",
+        "currency": "EUR",
+        "values": {
+          "single": 3
+        }
+      },
+      "available": true,
+      "featured": false,
+      "order": 4
+    },
     "pintxos-001": {
       "id": "pintxos-001",
       "slug": "cachoncitos",
@@ -793,7 +1276,7 @@
           "fullPortion": 2.9
         }
       },
-      "available": true,
+      "available": false,
       "featured": false,
       "order": 10
     },
@@ -2699,414 +3182,6 @@
       "featured": false,
       "order": 9
     },
-    "menu-del-dia-001": {
-      "id": "menu-del-dia-001",
-      "slug": "marmitako",
-      "categoryId": "menu-del-dia",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "MARMITAKO",
-          "description": "PESCADO fresco del DÍA"
-        },
-        "eu": {
-          "name": "MARMITAKO",
-          "description": "EGUNEKO ARRAIN Freskoa"
-        },
-        "en": {
-          "name": "MARMITAKO",
-          "description": "PESCADO fresco del DÍA",
-          "extras": ""
-        },
-        "fr": {
-          "name": "MARMITAKO",
-          "description": "PESCADO fresco del DÍA"
-        }
-      },
-      "pricing": {
-        "type": "menu",
-        "currency": "EUR",
-        "values": {
-          "menu": 17.5
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 1
-    },
-    "menu-del-dia-002": {
-      "id": "menu-del-dia-002",
-      "slug": "guisantes-con-jamon",
-      "categoryId": "menu-del-dia",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "GUISANTES con JAMÓN",
-          "description": "BACALAO AJOARRIERO"
-        },
-        "eu": {
-          "name": "Ilarrak urdaiazpikoarekin",
-          "description": "BAKAILAO AJOARRIERO"
-        },
-        "en": {
-          "name": "GUISANTES con JAMÓN",
-          "description": "BACALAO AJOARRIERO",
-          "extras": ""
-        },
-        "fr": {
-          "name": "GUISANTES con JAMÓN",
-          "description": "BACALAO AJOARRIERO"
-        }
-      },
-      "pricing": {
-        "type": "menu",
-        "currency": "EUR",
-        "values": {
-          "menu": 17.5
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 2
-    },
-    "menu-del-dia-003": {
-      "id": "menu-del-dia-003",
-      "slug": "pastel-templado-de-mejillones",
-      "categoryId": "menu-del-dia",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "PASTEL templado de MEJILLONES",
-          "description": "MILANESAS de LOMO con GUARNICIÓN"
-        },
-        "eu": {
-          "name": "MUSKUILU PILA Epela",
-          "description": "MILANESA DE LOMOA GAINERArekin"
-        },
-        "en": {
-          "name": "PASTEL templado de MEJILLONES",
-          "description": "MILANESAS de LOMO con GUARNICIÓN",
-          "extras": ""
-        },
-        "fr": {
-          "name": "PASTEL templado de MEJILLONES",
-          "description": "MILANESAS de LOMO con GUARNICIÓN"
-        }
-      },
-      "pricing": {
-        "type": "menu",
-        "currency": "EUR",
-        "values": {
-          "menu": 17.5
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 3
-    },
-    "menu-del-dia-004": {
-      "id": "menu-del-dia-004",
-      "slug": "desastre",
-      "categoryId": "menu-del-dia",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "\\\"DESASTRE\\\"",
-          "description": "COSTILLA de TERNERA con PIMIENTOS verdes"
-        },
-        "eu": {
-          "name": "\\\"HONDAMENDIA\\\"",
-          "description": "TXHALA SAHAIKI PIPER berdeekin"
-        },
-        "en": {
-          "name": "\"DESASTRE\"",
-          "description": "COSTILLA de TERNERA con PIMIENTOS verdes",
-          "extras": ""
-        },
-        "fr": {
-          "name": "\\\"DESASTRE\\\"",
-          "description": "COSTILLA de TERNERA con PIMIENTOS verdes"
-        }
-      },
-      "pricing": {
-        "type": "menu",
-        "currency": "EUR",
-        "values": {
-          "menu": 17.5
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 4
-    },
-    "menu-del-dia-005": {
-      "id": "menu-del-dia-005",
-      "slug": "ensalada-mixta",
-      "categoryId": "menu-del-dia",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "ENSALADA MIXTA",
-          "description": "FILETE con PATATAS caseras (ENTRECÔTTE + 3 €)"
-        },
-        "eu": {
-          "name": "ENTSALADA Mistoa",
-          "description": "TXULLETA Etxeko PATATekin (ENTRECÔTTE + 3€)"
-        },
-        "en": {
-          "name": "ENSALADA MIXTA",
-          "description": "FILETE con PATATAS caseras (ENTRECÔTTE + 3 €)",
-          "extras": ""
-        },
-        "fr": {
-          "name": "ENSALADA MIXTA",
-          "description": "FILETE con PATATAS caseras (ENTRECÔTTE + 3 €)"
-        }
-      },
-      "pricing": {
-        "type": "menu",
-        "currency": "EUR",
-        "values": {
-          "menu": 17.5
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 5
-    },
-    "menu-infantil-001": {
-      "id": "menu-infantil-001",
-      "slug": "no10",
-      "categoryId": "menu-infantil",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "Nº10",
-          "description": "Pechuga de pollo o lomo con patatas caseras"
-        },
-        "eu": {
-          "name": "Nº10",
-          "description": "Oilasko bularkia edo solomo etxeko patatekin"
-        },
-        "en": {
-          "name": "Nº10",
-          "description": "Chicken breats or pork loin with fries",
-          "extras": ""
-        },
-        "fr": {
-          "name": "Nº10",
-          "description": "Poitrine de poulet ou filet de porc avec frites (maison)"
-        }
-      },
-      "pricing": {
-        "type": "single",
-        "currency": "EUR",
-        "values": {
-          "single": 9.9
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 1
-    },
-    "menu-infantil-002": {
-      "id": "menu-infantil-002",
-      "slug": "no11",
-      "categoryId": "menu-infantil",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "Nº11",
-          "description": "Espaguetis con tomate"
-        },
-        "eu": {
-          "name": "Nº11",
-          "description": "Espagetia tomatearekin"
-        },
-        "en": {
-          "name": "Nº11",
-          "description": "Spaguetti with tomato sauce",
-          "extras": ""
-        },
-        "fr": {
-          "name": "Nº11",
-          "description": "Spaghetti à la tomate"
-        }
-      },
-      "pricing": {
-        "type": "single",
-        "currency": "EUR",
-        "values": {
-          "single": 9.9
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 2
-    },
-    "menu-infantil-003": {
-      "id": "menu-infantil-003",
-      "slug": "no12",
-      "categoryId": "menu-infantil",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "Nº12",
-          "description": "Huevos fritos con patatas caseras"
-        },
-        "eu": {
-          "name": "Nº12",
-          "description": "Arrautza frijituak etxeko patatekin"
-        },
-        "en": {
-          "name": "Nº12",
-          "description": "Fried eggs with fries",
-          "extras": ""
-        },
-        "fr": {
-          "name": "Nº12",
-          "description": "Oeufs frites avec frites (maison)"
-        }
-      },
-      "pricing": {
-        "type": "single",
-        "currency": "EUR",
-        "values": {
-          "single": 9.9
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 3
-    },
-    "postres-001": {
-      "id": "postres-001",
-      "slug": "postres-caseros",
-      "categoryId": "postres",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "POSTRES CASEROS"
-        },
-        "eu": {
-          "name": "POSTRES KASEROAK"
-        },
-        "en": {
-          "name": "HOMEMADE DESSERTS",
-          "description": "",
-          "extras": ""
-        },
-        "fr": {
-          "name": "DESSERTS MAISON"
-        }
-      },
-      "pricing": {
-        "type": "single",
-        "currency": "EUR",
-        "values": {
-          "single": 5.0
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 1
-    },
-    "postres-002": {
-      "id": "postres-002",
-      "slug": "tartas-variadas",
-      "categoryId": "postres",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "TARTAS VARIADAS"
-        },
-        "eu": {
-          "name": "TARTA HAUSITAKOAK"
-        },
-        "en": {
-          "name": "VARIED PIES",
-          "description": "",
-          "extras": ""
-        },
-        "fr": {
-          "name": "TARTES VARIÉES"
-        }
-      },
-      "pricing": {
-        "type": "single",
-        "currency": "EUR",
-        "values": {
-          "single": 5.0
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 2
-    },
-    "postres-003": {
-      "id": "postres-003",
-      "slug": "yogur",
-      "categoryId": "postres",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "YOGUR"
-        },
-        "eu": {
-          "name": "JOGURTA"
-        },
-        "en": {
-          "name": "YOGURT",
-          "description": "",
-          "extras": ""
-        },
-        "fr": {
-          "name": "YAOURT"
-        }
-      },
-      "pricing": {
-        "type": "single",
-        "currency": "EUR",
-        "values": {
-          "single": 2.0
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 3
-    },
-    "postres-004": {
-      "id": "postres-004",
-      "slug": "tarrina-helado",
-      "categoryId": "postres",
-      "mainSectionId": "menu",
-      "translations": {
-        "es": {
-          "name": "TARRINA HELADO"
-        },
-        "eu": {
-          "name": "IHOZKO IZOZKIA"
-        },
-        "en": {
-          "name": "ICE CREAM CUP",
-          "description": "",
-          "extras": ""
-        },
-        "fr": {
-          "name": "POT DE GLACE"
-        }
-      },
-      "pricing": {
-        "type": "single",
-        "currency": "EUR",
-        "values": {
-          "single": 3.0
-        }
-      },
-      "available": true,
-      "featured": false,
-      "order": 4
-    },
     "cafes-001": {
       "id": "cafes-001",
       "slug": "solo-cortado",
@@ -3260,7 +3335,7 @@
         "type": "single",
         "currency": "EUR",
         "values": {
-          "single": 2.0
+          "single": 2
         }
       },
       "available": true,
@@ -3580,7 +3655,7 @@
         "type": "single",
         "currency": "EUR",
         "values": {
-          "single": 3.0
+          "single": 3
         }
       },
       "available": true,
@@ -3840,7 +3915,7 @@
         "currency": "EUR",
         "values": {
           "small": 2.3,
-          "large": 3.0
+          "large": 3
         }
       },
       "available": true,
@@ -3873,7 +3948,7 @@
         "currency": "EUR",
         "values": {
           "small": 2.5,
-          "large": 3.0
+          "large": 3
         }
       },
       "available": true,
@@ -4130,7 +4205,7 @@
         "currency": "EUR",
         "values": {
           "glass": 1.5,
-          "bottle": 9.0
+          "bottle": 9
         }
       },
       "available": true,
@@ -4162,7 +4237,7 @@
         "type": "glass-bottle",
         "currency": "EUR",
         "values": {
-          "glass": 2.0,
+          "glass": 2,
           "bottle": 12.5
         }
       },
@@ -4262,7 +4337,7 @@
         "currency": "EUR",
         "values": {
           "glass": 2.8,
-          "bottle": 17.0
+          "bottle": 17
         }
       },
       "available": true,
@@ -4295,7 +4370,7 @@
         "currency": "EUR",
         "values": {
           "glass": 3.5,
-          "bottle": 23.0
+          "bottle": 23
         }
       },
       "available": true,
@@ -4328,7 +4403,7 @@
         "currency": "EUR",
         "values": {
           "glass": 2.8,
-          "bottle": 17.0
+          "bottle": 17
         }
       },
       "available": true,
@@ -4394,7 +4469,7 @@
         "currency": "EUR",
         "values": {
           "glass": 2.6,
-          "bottle": 15.0
+          "bottle": 15
         }
       },
       "available": true,
@@ -4459,7 +4534,7 @@
         "type": "glass-bottle",
         "currency": "EUR",
         "values": {
-          "glass": 2.0,
+          "glass": 2,
           "bottle": 12.5
         }
       },
@@ -4492,8 +4567,8 @@
         "type": "glass-bottle",
         "currency": "EUR",
         "values": {
-          "glass": 2.0,
-          "bottle": 9.0
+          "glass": 2,
+          "bottle": 9
         }
       },
       "available": true,
@@ -4558,7 +4633,7 @@
         "type": "glass-bottle",
         "currency": "EUR",
         "values": {
-          "glass": 2.0,
+          "glass": 2,
           "bottle": 13.5
         }
       },
@@ -4591,8 +4666,8 @@
         "type": "glass-bottle",
         "currency": "EUR",
         "values": {
-          "glass": 2.0,
-          "bottle": 12.0
+          "glass": 2,
+          "bottle": 12
         }
       },
       "available": true,
@@ -4691,7 +4766,7 @@
         "currency": "EUR",
         "values": {
           "glass": 2.2,
-          "bottle": 13.0
+          "bottle": 13
         }
       },
       "available": true,
@@ -4724,7 +4799,7 @@
         "currency": "EUR",
         "values": {
           "glass": 1.5,
-          "bottle": 9.0
+          "bottle": 9
         }
       },
       "available": true,
@@ -4789,7 +4864,7 @@
         "type": "glass-bottle",
         "currency": "EUR",
         "values": {
-          "glass": 2.0,
+          "glass": 2,
           "bottle": 12.5
         }
       },
@@ -4953,7 +5028,7 @@
         "type": "glass-bottle",
         "currency": "EUR",
         "values": {
-          "glass": 4.0
+          "glass": 4
         }
       },
       "available": true,
@@ -5018,7 +5093,7 @@
         "currency": "EUR",
         "values": {
           "small": 1.7,
-          "large": 2.0
+          "large": 2
         }
       },
       "available": true,
@@ -5722,7 +5797,7 @@
         "type": "dual",
         "currency": "EUR",
         "values": {
-          "single": 3.0,
+          "single": 3,
           "large": 5.5
         }
       },
@@ -5952,7 +6027,7 @@
         "type": "dual",
         "currency": "EUR",
         "values": {
-          "single": 3.0,
+          "single": 3,
           "large": 4.9
         }
       },
@@ -5985,7 +6060,7 @@
         "type": "single",
         "currency": "EUR",
         "values": {
-          "single": 8.0
+          "single": 8
         }
       },
       "available": true,
@@ -6017,7 +6092,7 @@
         "type": "single",
         "currency": "EUR",
         "values": {
-          "single": 9.0
+          "single": 9
         }
       },
       "available": true,
@@ -6028,7 +6103,12 @@
   "metadata": {
     "version": "2.0.0",
     "lastUpdated": "2026-03-26T15:32:57.555552",
-    "languages": ["es", "eu", "en", "fr"],
+    "languages": [
+      "es",
+      "eu",
+      "en",
+      "fr"
+    ],
     "defaultLanguage": "es",
     "restaurantInfo": {
       "name": "Bar Cachón",

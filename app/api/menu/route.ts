@@ -10,7 +10,11 @@ const isProduction = () => !!process.env.BLOB_READ_WRITE_TOKEN;
 
 // GET público - Obtener todos los datos del menú
 export async function GET() {
-  console.log("\n🌐 [API MENU] Nueva petición recibida");
+  const timestamp = Date.now();
+  console.log(
+    "\n🌐 [API MENU] Nueva petición recibida - Timestamp:",
+    timestamp,
+  );
   console.log(
     "🔍 BLOB_READ_WRITE_TOKEN presente:",
     !!process.env.BLOB_READ_WRITE_TOKEN,
@@ -43,7 +47,17 @@ export async function GET() {
       console.log("  - Subido:", latestBlob.uploadedAt);
       console.log("  - Tamaño:", latestBlob.size, "bytes");
 
-      const response = await fetch(latestBlob.url, { cache: "no-store" });
+      // Añadir timestamp para evitar caché del CDN
+      const blobUrl = `${latestBlob.url}?cache_bust=${Date.now()}`;
+      console.log("🔗 URL con cache buster:", blobUrl);
+
+      const response = await fetch(blobUrl, {
+        cache: "no-store",
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          Pragma: "no-cache",
+        },
+      });
 
       if (!response.ok) {
         console.error("❌ Error al hacer fetch del blob:", response.status);
@@ -56,10 +70,14 @@ export async function GET() {
         "📊 Items totales:",
         Object.keys(menuData.items || {}).length,
       );
+      console.log("🕒 Hora de carga:", new Date().toISOString());
 
       return NextResponse.json(menuData, {
         headers: {
-          "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
+          "Cache-Control":
+            "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+          Pragma: "no-cache",
+          Expires: "0",
         },
       });
     } else {
@@ -73,10 +91,12 @@ export async function GET() {
         "📊 Items totales:",
         Object.keys(menuData.items || {}).length,
       );
+      console.log("🕒 Hora de carga:", new Date().toISOString());
 
       return NextResponse.json(menuData, {
         headers: {
-          "Cache-Control": "public, s-maxage=30, stale-while-revalidate=60",
+          "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+          Pragma: "no-cache",
         },
       });
     }

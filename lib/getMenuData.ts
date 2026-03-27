@@ -30,12 +30,22 @@ export async function getMenuData(): Promise<MenuData> {
         ? `https://${process.env.VERCEL_URL}`
         : "http://localhost:3000");
 
+    // Añadir timestamp para evitar CUALQUIER tipo de caché
+    const timestamp = Date.now();
+    const url = `${baseUrl}/api/menu?t=${timestamp}`;
+
     console.log("🌐 [PRODUCCIÓN] Haciendo fetch a API...");
-    console.log("🔗 URL:", `${baseUrl}/api/menu`);
+    console.log("🔗 URL:", url);
 
     try {
-      const res = await fetch(`${baseUrl}/api/menu`, {
+      const res = await fetch(url, {
         cache: "no-store",
+        next: { revalidate: 0 },
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+          Pragma: "no-cache",
+          Expires: "0",
+        },
       });
 
       console.log("📡 Respuesta de API:", res.status, res.statusText);

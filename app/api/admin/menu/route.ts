@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { put } from "@vercel/blob";
+import { put, list } from "@vercel/blob";
 import { promises as fs } from "fs";
 import path from "path";
 import { validateAdminToken } from "@/lib/admin-auth";
@@ -29,9 +29,28 @@ export async function GET(request: NextRequest) {
 
   try {
     // En producción con Blob
-    if (isUsingBlob() && process.env.BLOB_URL) {
-      const response = await fetch(process.env.BLOB_URL, {
-        cache: "no-store", // No cachear para obtener siempre datos frescos
+    if (isUsingBlob()) {
+      // Obtener la URL más reciente del blob usando list()
+      const { blobs } = await list({
+        prefix: BLOB_FILENAME,
+        limit: 1,
+      });
+
+      if (blobs.length === 0) {
+        throw new Error(
+          "No se encontró el archivo menu-data.json en Vercel Blob",
+        );
+      }
+
+      const blobUrl = blobs[0].url;
+
+      const response = await fetch(blobUrl, {
+        cache: "no-store",
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+        },
       });
 
       if (response.ok) {

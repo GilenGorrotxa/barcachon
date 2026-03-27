@@ -85,9 +85,15 @@ export default function CategoriesPage() {
 
       if (saveResponse.ok) {
         alert("✅ Cambios guardados correctamente");
-        resetOriginalData(sections); // Reset tracking después de guardar
+
+        // Recargar datos desde el servidor para tener el estado actualizado
+        await loadData();
       } else {
-        alert("❌ Error al guardar cambios");
+        const errorData = await saveResponse.json();
+        console.error("Error al guardar:", errorData);
+        alert(
+          `❌ Error al guardar cambios: ${errorData.details || errorData.error}`,
+        );
       }
     } catch (error) {
       console.error("Error al guardar:", error);

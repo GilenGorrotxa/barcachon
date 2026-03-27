@@ -180,11 +180,15 @@ export default function MenuManagementPage() {
 
       if (saveResponse.ok) {
         alert("✅ Cambios guardados correctamente");
-        loadData();
-        // Resetear tracking después de recargar
-        setTimeout(() => resetOriginalData({ sections, items }), 100);
+
+        // Recargar datos desde el servidor para tener el estado actualizado
+        await loadData();
       } else {
-        alert("❌ Error al guardar cambios");
+        const errorData = await saveResponse.json();
+        console.error("Error al guardar:", errorData);
+        alert(
+          `❌ Error al guardar cambios: ${errorData.details || errorData.error}`,
+        );
       }
     } catch (error) {
       console.error("Error al guardar:", error);

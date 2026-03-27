@@ -61,7 +61,16 @@ export default function ItemsPage() {
 
   const loadData = async () => {
     try {
-      const response = await fetch("/api/admin/menu");
+      // Añadir timestamp para evitar cache del navegador
+      const timestamp = Date.now();
+      const response = await fetch(`/api/admin/menu?t=${timestamp}`, {
+        cache: "no-store",
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          Pragma: "no-cache",
+        },
+      });
+
       if (!response.ok) {
         router.push("/admin/login");
         return;
@@ -115,7 +124,11 @@ export default function ItemsPage() {
   const saveData = async () => {
     setSaving(true);
     try {
-      const response = await fetch("/api/admin/menu");
+      // Obtener datos completos con cache-busting
+      const timestamp = Date.now();
+      const response = await fetch(`/api/admin/menu?t=${timestamp}`, {
+        cache: "no-store",
+      });
       const fullData = await response.json();
 
       // Convertir array de items de vuelta a objeto
@@ -133,9 +146,15 @@ export default function ItemsPage() {
 
       if (saveResponse.ok) {
         alert("✅ Cambios guardados correctamente");
-        resetOriginalData(items); // Reset tracking después de guardar
+
+        // Recargar datos desde el servidor para tener el estado actualizado
+        await loadData();
       } else {
-        alert("❌ Error al guardar cambios");
+        const errorData = await saveResponse.json();
+        console.error("Error al guardar:", errorData);
+        alert(
+          `❌ Error al guardar cambios: ${errorData.details || errorData.error}`,
+        );
       }
     } catch (error) {
       console.error("Error al guardar:", error);

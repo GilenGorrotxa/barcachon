@@ -7,6 +7,10 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import Link from "next/link";
 import type { Locale } from "@/lib/types";
 
+// Forzar renderizado dinámico para reflejar cambios inmediatos
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default async function MenuPage({
   params,
 }: {

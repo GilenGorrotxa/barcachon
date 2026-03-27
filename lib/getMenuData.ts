@@ -20,8 +20,14 @@ export async function getMenuData(): Promise<MenuData> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
   try {
-    const res = await fetch(`${baseUrl}/api/menu`, {
+    // Añadir timestamp para evitar cache del navegador
+    const timestamp = Date.now();
+    const res = await fetch(`${baseUrl}/api/menu?t=${timestamp}`, {
       cache: "no-store",
+      headers: {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        Pragma: "no-cache",
+      },
     });
 
     if (!res.ok) {

@@ -6,6 +6,10 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { getMenuData } from "@/lib/getMenuData";
 
+// Forzar renderizado dinámico para reflejar cambios inmediatos
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default async function CategoryPage({
   params,
 }: {

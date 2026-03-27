@@ -3,6 +3,10 @@ import { CategoryButton } from "@/components/CategoryButton";
 import type { MenuData } from "@/lib/types/menu.types";
 import { getMenuData } from "@/lib/getMenuData";
 
+// Forzar renderizado dinámico para reflejar cambios inmediatos
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default async function CartaPage({
   params,
 }: {

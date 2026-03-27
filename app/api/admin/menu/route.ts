@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { put, head } from "@vercel/blob";
+import { put } from "@vercel/blob";
 import { promises as fs } from "fs";
 import path from "path";
 import { validateAdminToken } from "@/lib/admin-auth";
@@ -17,6 +17,11 @@ function checkAuth(request: NextRequest) {
   return true;
 }
 
+// Verificar si estamos en modo producción con Blob
+function isUsingBlob() {
+  return !!process.env.BLOB_READ_WRITE_TOKEN;
+}
+
 // GET - Obtener todos los datos del menú
 export async function GET(request: NextRequest) {
   if (!checkAuth(request)) {
@@ -24,26 +29,33 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    // Intentar obtener desde Vercel Blob
-    const blobUrl = process.env.BLOB_URL;
+    // En producción con Blob
+    if (isUsingBlob() && process.env.BLOB_URL) {
+      const response = await fetch(process.env.BLOB_URL, {
+        cache: "no-store", // No cachear para obtener siempre datos frescos
+      });
 
-    if (blobUrl) {
-      // En producción: leer desde Blob
-      const response = await fetch(blobUrl);
       if (response.ok) {
         const menuData = await response.json();
         return NextResponse.json(menuData);
       }
+
+      throw new Error(
+        `Blob fetch failed: ${response.status} ${response.statusText}`,
+      );
     }
 
-    // Fallback a archivo local (desarrollo)
+    // Desarrollo: leer archivo local
     const fileContent = await fs.readFile(LOCAL_MENU_DATA_PATH, "utf-8");
     const menuData = JSON.parse(fileContent);
     return NextResponse.json(menuData);
   } catch (error) {
     console.error("Error al leer menu-data:", error);
     return NextResponse.json(
-      { error: "Error al cargar los datos" },
+      {
+        error: "Error al cargar los datos",
+        details: error instanceof Error ? error.message : String(error),
+      },
       { status: 500 },
     );
   }
@@ -59,33 +71,38 @@ export async function PUT(request: NextRequest) {
     const body = await request.json();
     const jsonString = JSON.stringify(body, null, 2);
 
-    // Verificar si estamos en producción (con Vercel Blob)
-    if (process.env.BLOB_READ_WRITE_TOKEN) {
-      // 1. Crear backup del blob actual
-      try {
-        const blobUrl = process.env.BLOB_URL;
-        if (blobUrl) {
-          const currentData = await fetch(blobUrl);
+    // Producción con Vercel Blob
+    if (isUsingBlob()) {
+      console.log("💾 Guardando en Vercel Blob...");
+
+      // 1. Crear backup del blob actual (si existe)
+      if (process.env.BLOB_URL) {
+        try {
+          const currentData = await fetch(process.env.BLOB_URL, {
+            cache: "no-store",
+          });
+
           if (currentData.ok) {
             const currentJson = await currentData.text();
             await put(BACKUP_BLOB_FILENAME, currentJson, {
               access: "public",
               addRandomSuffix: false,
             });
+            console.log("✅ Backup creado");
           }
+        } catch (backupError) {
+          console.warn("⚠️ No se pudo crear backup:", backupError);
+          // Continuar de todos modos
         }
-      } catch (backupError) {
-        console.warn("No se pudo crear backup:", backupError);
       }
 
-      // 2. Guardar nuevos datos en blob
+      // 2. Guardar nuevos datos
       const blob = await put(BLOB_FILENAME, jsonString, {
         access: "public",
         addRandomSuffix: false,
       });
 
-      // 3. Actualizar variable de entorno en memoria (para siguiente request)
-      process.env.BLOB_URL = blob.url;
+      console.log("✅ Blob guardado:", blob.url);
 
       return NextResponse.json({
         success: true,
@@ -94,6 +111,8 @@ export async function PUT(request: NextRequest) {
       });
     } else {
       // Desarrollo: guardar en archivo local
+      console.log("💾 Guardando en archivo local...");
+
       const backupPath = path.join(
         process.cwd(),
         "lib",
@@ -103,15 +122,23 @@ export async function PUT(request: NextRequest) {
       await fs.writeFile(backupPath, fileContent, "utf-8");
       await fs.writeFile(LOCAL_MENU_DATA_PATH, jsonString, "utf-8");
 
+      console.log("✅ Archivo local guardado");
+
       return NextResponse.json({
         success: true,
         message: "Datos guardados correctamente (modo desarrollo)",
       });
     }
   } catch (error) {
-    console.error("Error al guardar menu-data:", error);
+    console.error("❌ Error al guardar menu-data:", error);
+
+    // Devolver detalles del error para debugging
     return NextResponse.json(
-      { error: "Error al guardar los datos" },
+      {
+        error: "Error al guardar los datos",
+        details: error instanceof Error ? error.message : String(error),
+        stack: error instanceof Error ? error.stack : undefined,
+      },
       { status: 500 },
     );
   }

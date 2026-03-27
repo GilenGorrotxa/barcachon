@@ -1,19 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import type { MenuData, Locale } from "@/lib/types/menu.types";
-
-// Función para obtener datos dinámicamente
-async function getMenuData(): Promise<MenuData> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/api/menu`, {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch menu data");
-  }
-
-  return res.json();
-}
+import { getMenuData } from "@/lib/getMenuData";
 export default async function DailyMenuPage({
   params,
 }: {

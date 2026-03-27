@@ -12,8 +12,8 @@
   "prisma": {
     "seed": "tsx prisma/seed.ts"
   },
-  "depprisma/client": "^5.22.0",
-    "@endencies": {
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
     "@base-ui/react": "^1.3.0",
     "@vercel/blob": "^2.3.1",
     "class-variance-authority": "^0.7.1",
@@ -29,7 +29,7 @@
     "zod": "^4.3.6",
     "zustand": "^5.0.12"
   },
-  "devprisma/client": "^5.22.0",
+  "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

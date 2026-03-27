@@ -11,8 +11,6 @@ import { prisma } from "@/lib/prisma";
 
 export async function getMenuData(): Promise<MenuData> {
   try {
-    console.log("📖 [getMenuData] Cargando menú desde base de datos...");
-
     const menuRecord = await prisma.menuData.findUnique({
       where: { id: "current" },
     });
@@ -22,14 +20,9 @@ export async function getMenuData(): Promise<MenuData> {
       return menuDataJson as unknown as MenuData;
     }
 
-    console.log("✅ Menú cargado desde BD");
-    console.log("📊 Versión:", menuRecord.version);
-    console.log("📅 Última actualización:", menuRecord.updatedAt);
-
-    return menuRecord.data as MenuData;
+    return menuRecord.data as unknown as MenuData;
   } catch (error) {
     console.error("❌ Error al leer de BD:", error);
-    console.log("📁 Usando archivo local como fallback");
     return menuDataJson as unknown as MenuData;
   }
 }

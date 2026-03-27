@@ -5,7 +5,6 @@ import path from "path";
 import { validateAdminToken } from "@/lib/admin-auth";
 
 const BLOB_FILENAME = "menu-data.json";
-const BACKUP_BLOB_FILENAME = "menu-data.backup.json";
 const LOCAL_MENU_DATA_PATH = path.join(process.cwd(), "lib", "menu-data.json");
 
 // Middleware para verificar autenticación
@@ -75,31 +74,10 @@ export async function PUT(request: NextRequest) {
     if (isUsingBlob()) {
       console.log("💾 Guardando en Vercel Blob...");
 
-      // 1. Crear backup del blob actual (si existe)
-      if (process.env.BLOB_URL) {
-        try {
-          const currentData = await fetch(process.env.BLOB_URL, {
-            cache: "no-store",
-          });
-
-          if (currentData.ok) {
-            const currentJson = await currentData.text();
-            await put(BACKUP_BLOB_FILENAME, currentJson, {
-              access: "public",
-              addRandomSuffix: false,
-            });
-            console.log("✅ Backup creado");
-          }
-        } catch (backupError) {
-          console.warn("⚠️ No se pudo crear backup:", backupError);
-          // Continuar de todos modos
-        }
-      }
-
-      // 2. Guardar nuevos datos
       const blob = await put(BLOB_FILENAME, jsonString, {
         access: "public",
         addRandomSuffix: false,
+        allowOverwrite: true,
       });
 
       console.log("✅ Blob guardado:", blob.url);
@@ -113,13 +91,6 @@ export async function PUT(request: NextRequest) {
       // Desarrollo: guardar en archivo local
       console.log("💾 Guardando en archivo local...");
 
-      const backupPath = path.join(
-        process.cwd(),
-        "lib",
-        "menu-data.backup.json",
-      );
-      const fileContent = await fs.readFile(LOCAL_MENU_DATA_PATH, "utf-8");
-      await fs.writeFile(backupPath, fileContent, "utf-8");
       await fs.writeFile(LOCAL_MENU_DATA_PATH, jsonString, "utf-8");
 
       console.log("✅ Archivo local guardado");

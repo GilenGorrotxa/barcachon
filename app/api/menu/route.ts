@@ -52,8 +52,10 @@ export async function GET() {
 
       const menuData = await response.json();
       console.log("✅ Menú cargado desde Blob exitosamente");
-      console.log("📊 Categorías:", menuData.categories?.length || 0);
-      console.log("📊 Items:", menuData.items?.length || 0);
+      console.log(
+        "📊 Items totales:",
+        Object.keys(menuData.items || {}).length,
+      );
 
       return NextResponse.json(menuData, {
         headers: {
@@ -67,8 +69,10 @@ export async function GET() {
       const fileContent = await fs.readFile(LOCAL_MENU_DATA_PATH, "utf-8");
       const menuData = JSON.parse(fileContent);
       console.log("✅ Menú cargado desde archivo local");
-      console.log("📊 Categorías:", menuData.categories?.length || 0);
-      console.log("📊 Items:", menuData.items?.length || 0);
+      console.log(
+        "📊 Items totales:",
+        Object.keys(menuData.items || {}).length,
+      );
 
       return NextResponse.json(menuData, {
         headers: {

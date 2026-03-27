@@ -1,97 +1,98 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { list } from "@vercel/blob";
 import { promises as fs } from "fs";
 import path from "path";
 
-const BLOB_FILENAME = "menu-data.json";
 const LOCAL_MENU_DATA_PATH = path.join(process.cwd(), "lib", "menu-data.json");
+const BLOB_FILENAME = "menu-data.json";
 
-// Verificar si estamos en modo producción con Blob
-function isUsingBlob() {
-  return !!process.env.BLOB_READ_WRITE_TOKEN;
-}
+const isProduction = () => !!process.env.BLOB_READ_WRITE_TOKEN;
 
 // GET público - Obtener todos los datos del menú
-export async function GET(request: NextRequest) {
+export async function GET() {
+  console.log("\n🌐 [API MENU] Nueva petición recibida");
+  console.log(
+    "🔍 BLOB_READ_WRITE_TOKEN presente:",
+    !!process.env.BLOB_READ_WRITE_TOKEN,
+  );
+  console.log("🔍 Modo producción:", isProduction());
+
   try {
-    // En producción con Blob
-    if (isUsingBlob()) {
-      // Obtener la lista de blobs ordenada por fecha de subida (más reciente primero)
-      const { blobs } = await list({
-        prefix: BLOB_FILENAME,
-        limit: 10,
-      });
+    if (isProduction()) {
+      // PRODUCCIÓN: Leer desde Vercel Blob
+      console.log("📥 [PRODUCCIÓN] Leyendo desde Vercel Blob...");
+      console.log("🔍 Buscando blobs con prefix:", BLOB_FILENAME);
+
+      const { blobs } = await list({ prefix: BLOB_FILENAME });
+
+      console.log("📊 Blobs encontrados:", blobs.length);
 
       if (blobs.length === 0) {
-        // Si no hay blob, intentar leer el archivo local como fallback
-        console.warn("No se encontró blob, usando archivo local como fallback");
-        const fileContent = await fs.readFile(LOCAL_MENU_DATA_PATH, "utf-8");
-        const menuData = JSON.parse(fileContent);
-        return NextResponse.json(menuData, {
-          headers: {
-            "Cache-Control": "public, s-maxage=30, stale-while-revalidate=60",
-          },
-        });
+        console.error("❌ No se encontró ningún blob!");
+        throw new Error("No se encontró el archivo en Vercel Blob");
       }
 
-      // Ordenar por fecha de subida descendente (más reciente primero)
-      const sortedBlobs = blobs.sort(
+      // Obtener el blob más reciente
+      const latestBlob = blobs.sort(
         (a, b) =>
           new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime(),
-      );
+      )[0];
 
-      const blobUrl = sortedBlobs[0].url;
+      console.log("✅ Blob más reciente:");
+      console.log("  - URL:", latestBlob.url);
+      console.log("  - Subido:", latestBlob.uploadedAt);
+      console.log("  - Tamaño:", latestBlob.size, "bytes");
 
-      console.log(`📥 API Pública - Leyendo blob más reciente: ${blobUrl}`);
-      console.log(`📅 Subido en: ${sortedBlobs[0].uploadedAt}`);
-
-      // Añadir timestamp para evitar cache del navegador
-      const timestamp = Date.now();
-      const urlWithCacheBuster = `${blobUrl}?t=${timestamp}`;
-
-      const response = await fetch(urlWithCacheBuster, {
-        cache: "no-store",
-        headers: {
-          "Cache-Control": "no-cache, no-store, must-revalidate",
-          Pragma: "no-cache",
-          Expires: "0",
-        },
-      });
+      const response = await fetch(latestBlob.url, { cache: "no-store" });
 
       if (!response.ok) {
-        throw new Error(
-          `Blob fetch failed: ${response.status} ${response.statusText}`,
-        );
+        console.error("❌ Error al hacer fetch del blob:", response.status);
+        throw new Error(`Error al leer blob: ${response.status}`);
       }
 
       const menuData = await response.json();
+      console.log("✅ Menú cargado desde Blob exitosamente");
+      console.log("📊 Categorías:", menuData.categories?.length || 0);
+      console.log("📊 Items:", menuData.items?.length || 0);
 
-      // Cache público corto para balance entre performance y actualización
+      return NextResponse.json(menuData, {
+        headers: {
+          "Cache-Control": "public, s-maxage=60, stale-while-revalidate=120",
+        },
+      });
+    } else {
+      // DESARROLLO: Leer desde archivo local
+      console.log("📥 [DESARROLLO] Leyendo desde archivo local...");
+      console.log("📁 Ruta:", LOCAL_MENU_DATA_PATH);
+      const fileContent = await fs.readFile(LOCAL_MENU_DATA_PATH, "utf-8");
+      const menuData = JSON.parse(fileContent);
+      console.log("✅ Menú cargado desde archivo local");
+      console.log("📊 Categorías:", menuData.categories?.length || 0);
+      console.log("📊 Items:", menuData.items?.length || 0);
+
       return NextResponse.json(menuData, {
         headers: {
           "Cache-Control": "public, s-maxage=30, stale-while-revalidate=60",
         },
       });
     }
-
-    // Desarrollo: leer archivo local
-    const fileContent = await fs.readFile(LOCAL_MENU_DATA_PATH, "utf-8");
-    const menuData = JSON.parse(fileContent);
-
-    return NextResponse.json(menuData, {
-      headers: {
-        "Cache-Control": "no-store, must-revalidate",
-      },
-    });
   } catch (error) {
-    console.error("❌ Error al leer menu-data:", error);
+    console.error("❌ [ERROR] Error al leer menu-data:");
+    console.error("📝 Detalles:", error);
 
-    return NextResponse.json(
-      {
-        error: "Error al cargar los datos del menú",
-        details: error instanceof Error ? error.message : String(error),
-      },
-      { status: 500 },
-    );
+    // Fallback al archivo local
+    try {
+      const fileContent = await fs.readFile(LOCAL_MENU_DATA_PATH, "utf-8");
+      const menuData = JSON.parse(fileContent);
+      return NextResponse.json(menuData);
+    } catch (fallbackError) {
+      return NextResponse.json(
+        {
+          error: "Error al cargar los datos",
+          details: error instanceof Error ? error.message : String(error),
+        },
+        { status: 500 },
+      );
+    }
   }
 }

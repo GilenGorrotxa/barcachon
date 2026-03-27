@@ -3,7 +3,7 @@ import { CategoryButton } from "@/components/CategoryButton";
 import type { MenuData } from "@/lib/types/menu.types";
 import { getMenuData } from "@/lib/getMenuData";
 
-// Forzar renderizado dinámico para reflejar cambios inmediatos
+// Forzar renderizado dinámico en producción para leer del Blob
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 

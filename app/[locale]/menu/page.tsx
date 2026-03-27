@@ -7,7 +7,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import Link from "next/link";
 import type { Locale } from "@/lib/types";
 
-// Forzar renderizado dinámico para reflejar cambios inmediatos
+// Forzar renderizado dinámico en producción para leer del Blob
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 

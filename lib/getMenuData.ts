@@ -1,47 +1,55 @@
 /**
- * Función universal para obtener datos del menú
- * - Durante BUILD: lee archivo local
- * - Durante RUNTIME: hace fetch a la API
+ * Función para obtener datos del menú
+ * - En producción (Vercel): lee desde API → Blob Storage
+ * - En desarrollo: lee archivo local
+ * 
+ * Nota: Las páginas usan force-dynamic, así que esto SIEMPRE
+ * se ejecuta en runtime, no en build time
  */
 
 import type { MenuData } from "@/lib/types/menu.types";
+import menuDataJson from "@/lib/menu-data.json";
 
 export async function getMenuData(): Promise<MenuData> {
-  // Detectar si estamos en build time (no hay headers de request)
-  const isBuildTime = typeof window === "undefined" && !process.env.VERCEL;
+  console.log("\n📖 [getMenuData] Iniciando carga de menú...");
+  console.log("🔍 BLOB_READ_WRITE_TOKEN presente:", !!process.env.BLOB_READ_WRITE_TOKEN);
+  console.log("🔍 VERCEL_URL:", process.env.VERCEL_URL || "(no definido)");
+  console.log("🔍 NEXT_PUBLIC_BASE_URL:", process.env.NEXT_PUBLIC_BASE_URL || "(no definido)");
+  
+  // En producción, siempre usar la API que lee del Blob
+  if (process.env.BLOB_READ_WRITE_TOKEN) {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+    
+    console.log("🌐 [PRODUCCIÓN] Haciendo fetch a API...");
+    console.log("🔗 URL:", `${baseUrl}/api/menu`);
+    
+    try {
+      const res = await fetch(`${baseUrl}/api/menu`, {
+        cache: "no-store",
+      });
 
-  if (isBuildTime) {
-    // Durante el build, leer directamente del archivo local
-    const menuData = await import("@/lib/menu-data.json");
-    return menuData.default as unknown as MenuData;
-  }
+      console.log("📡 Respuesta de API:", res.status, res.statusText);
 
-  // Durante runtime, usar la API dinámica
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-  try {
-    // Añadir timestamp para evitar cache del navegador
-    const timestamp = Date.now();
-    const res = await fetch(`${baseUrl}/api/menu?t=${timestamp}`, {
-      cache: "no-store",
-      headers: {
-        "Cache-Control": "no-cache, no-store, must-revalidate",
-        Pragma: "no-cache",
-      },
-    });
-
-    if (!res.ok) {
-      throw new Error(`Failed to fetch menu data: ${res.status}`);
+      if (res.ok) {
+        const data = await res.json();
+        console.log("✅ Menú cargado desde Blob via API");
+        console.log("📊 Categorías:", data.categories?.length || 0);
+        console.log("📊 Items:", data.items?.length || 0);
+        return data;
+      }
+      
+      console.error("❌ API fetch falló con status:", res.status);
+    } catch (error) {
+      console.error("❌ Error haciendo fetch a API:");
+      console.error("📝 Detalles:", error);
     }
-
-    return res.json();
-  } catch (error) {
-    console.error(
-      "Error fetching menu data, falling back to local file:",
-      error,
-    );
-    // Fallback al archivo local si falla el fetch
-    const menuData = await import("@/lib/menu-data.json");
-    return menuData.default as unknown as MenuData;
   }
+
+  // En desarrollo o como fallback: archivo local
+  console.log("📁 Usando archivo local como fallback");
+  console.log("📊 Categorías en local:", menuDataJson.categories?.length || 0);
+  console.log("📊 Items en local:", menuDataJson.items?.length || 0);
+  return menuDataJson as unknown as MenuData;
+}
 }

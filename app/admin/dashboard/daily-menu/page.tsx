@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import FloatingSaveButton from "@/components/admin/FloatingSaveButton";
+import { useUnsavedChanges } from "@/lib/hooks/useUnsavedChanges";
 
 interface MenuItem {
   id: string;
@@ -46,6 +48,12 @@ export default function DailyMenuPage() {
     new Set(["primeros", "segundos", "postres"]),
   );
   const router = useRouter();
+
+  // Tracking de cambios sin guardar
+  const { hasUnsavedChanges, resetOriginalData } = useUnsavedChanges(
+    { primerosPlatos, segundosPlatos, postresItems, price },
+    !loading,
+  );
 
   useEffect(() => {
     loadData();
@@ -177,6 +185,15 @@ export default function DailyMenuPage() {
       if (saveResponse.ok) {
         alert("✅ Menú del día guardado correctamente");
         loadData();
+        // Resetear tracking después de recargar
+        setTimeout(() => {
+          resetOriginalData({
+            primerosPlatos,
+            segundosPlatos,
+            postresItems,
+            price,
+          });
+        }, 100);
       } else {
         alert("❌ Error al guardar cambios");
       }
@@ -396,9 +413,22 @@ export default function DailyMenuPage() {
             <Button
               onClick={saveData}
               disabled={saving}
-              className="bg-white text-black hover:bg-gray-200 border-0 transition-colors rounded-md font-medium"
+              className={`
+                border-0 transition-all duration-300 rounded-md font-medium
+                ${
+                  hasUnsavedChanges
+                    ? "bg-orange-600 text-white hover:bg-orange-700 animate-pulse"
+                    : "bg-white text-black hover:bg-gray-200"
+                }
+              `}
             >
-              {saving ? "Guardando..." : "Guardar"}
+              {saving ? (
+                "💾 Guardando..."
+              ) : hasUnsavedChanges ? (
+                <span className="flex items-center gap-2">⚠️ Guardar</span>
+              ) : (
+                "✓ Todo Guardado"
+              )}
             </Button>
           </div>
         </div>
@@ -699,6 +729,13 @@ export default function DailyMenuPage() {
           )}
         </div>
       </main>
+
+      {/* Botón flotante de guardado */}
+      <FloatingSaveButton
+        hasUnsavedChanges={hasUnsavedChanges}
+        onSave={saveData}
+        isSaving={saving}
+      />
 
       {/* Modal de Edición */}
       {showItemModal && editingItem && (

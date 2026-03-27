@@ -6,8 +6,8 @@
 
 **Credenciales por defecto:**
 
-- Usuario: `admin`
-- Contraseña: `cachon2024`
+- Usuario: `barcachon`
+- Contraseña: `Martuneta69`
 
 > ⚠️ **IMPORTANTE:** Cambiar la contraseña en `lib/admin-auth.ts` antes de poner en producción.
 

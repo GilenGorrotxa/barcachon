@@ -175,8 +175,8 @@ npm run lint
 - **Login Admin:** http://localhost:3000/admin/login
 - **Dashboard:** http://localhost:3000/admin/dashboard
 - **Credenciales por defecto:**
-  - Usuario: `admin`
-  - Contraseña: `cachon2024` (cambiar en `lib/admin-auth.ts`)
+  - Usuario: `barcachon`
+  - Contraseña: `Martuneta69` (cambiar en `lib/admin-auth.ts`)
 
 ## 📄 Datos Antiguos
 

@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import FloatingSaveButton from "@/components/admin/FloatingSaveButton";
+import { useUnsavedChanges } from "@/lib/hooks/useUnsavedChanges";
 
 interface Category {
   id: string;
@@ -42,6 +44,12 @@ export default function CategoriesPage() {
   } | null>(null);
   const router = useRouter();
 
+  // Tracking de cambios sin guardar
+  const { hasUnsavedChanges, resetOriginalData } = useUnsavedChanges(
+    sections,
+    !loading,
+  );
+
   useEffect(() => {
     loadData();
   }, []);
@@ -76,13 +84,14 @@ export default function CategoriesPage() {
       });
 
       if (saveResponse.ok) {
-        alert("Cambios guardados correctamente");
+        alert("✅ Cambios guardados correctamente");
+        resetOriginalData(sections); // Reset tracking después de guardar
       } else {
-        alert("Error al guardar cambios");
+        alert("❌ Error al guardar cambios");
       }
     } catch (error) {
       console.error("Error al guardar:", error);
-      alert("Error al guardar cambios");
+      alert("❌ Error al guardar cambios");
     } finally {
       setSaving(false);
     }
@@ -163,9 +172,24 @@ export default function CategoriesPage() {
               <Button
                 onClick={saveData}
                 disabled={saving}
-                className="bg-white text-black hover:bg-gray-200"
+                className={`
+                  transition-all duration-300
+                  ${
+                    hasUnsavedChanges
+                      ? "bg-orange-600 text-white hover:bg-orange-700 shadow-lg animate-pulse"
+                      : "bg-white text-black hover:bg-gray-200"
+                  }
+                `}
               >
-                {saving ? "Guardando..." : "Guardar Cambios"}
+                {saving ? (
+                  "💾 Guardando..."
+                ) : hasUnsavedChanges ? (
+                  <span className="flex items-center gap-2">
+                    ⚠️ Guardar Cambios
+                  </span>
+                ) : (
+                  "✓ Todo Guardado"
+                )}
               </Button>
             </div>
           </div>
@@ -362,8 +386,15 @@ export default function CategoriesPage() {
               ))}
             </div>
           </div>
-        ))}
+        ))}{" "}
       </main>
+
+      {/* Botón flotante de guardado */}
+      <FloatingSaveButton
+        hasUnsavedChanges={hasUnsavedChanges}
+        onSave={saveData}
+        isSaving={saving}
+      />
     </div>
   );
 }

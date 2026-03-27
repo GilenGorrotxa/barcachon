@@ -2,8 +2,8 @@
 // NOTA: En producción, usar variables de entorno y hash de contraseñas
 
 export const ADMIN_CREDENTIALS = {
-  username: "admin",
-  password: "cachon2024", // Cambiar esta contraseña
+  username: "barcachon",
+  password: "Martuneta69", // Cambiar esta contraseña
 };
 
 export function validateCredentials(

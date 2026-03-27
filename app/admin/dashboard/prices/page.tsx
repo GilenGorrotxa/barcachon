@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import FloatingSaveButton from "@/components/admin/FloatingSaveButton";
+import { useUnsavedChanges } from "@/lib/hooks/useUnsavedChanges";
 
 interface PriceUpdate {
   id: string;
@@ -20,6 +22,12 @@ export default function PricesPage() {
   const [saving, setSaving] = useState(false);
   const [percentageChange, setPercentageChange] = useState<number>(0);
   const router = useRouter();
+
+  // Tracking de cambios sin guardar
+  const { hasUnsavedChanges, resetOriginalData } = useUnsavedChanges(
+    priceUpdates,
+    !loading,
+  );
 
   useEffect(() => {
     loadData();
@@ -115,10 +123,21 @@ export default function PricesPage() {
       });
 
       if (saveResponse.ok) {
-        alert("Precios actualizados correctamente");
+        alert("✅ Precios actualizados correctamente");
         loadData();
+        // Resetear tracking después de recargar
+        setTimeout(() => {
+          const updates = itemsArray.map((item: any) => ({
+            id: item.id,
+            name: item.translations.es.name,
+            categoryId: item.categoryId,
+            currentPrices: { ...item.price },
+            newPrices: { ...item.price },
+          }));
+          resetOriginalData(updates);
+        }, 100);
       } else {
-        alert("Error al guardar cambios");
+        alert("❌ Error al guardar cambios");
       }
     } catch (error) {
       console.error("Error al guardar:", error);
@@ -155,9 +174,24 @@ export default function PricesPage() {
               <Button
                 onClick={saveChanges}
                 disabled={saving}
-                className="bg-green-600 text-white hover:bg-green-700"
+                className={`
+                  text-white transition-all duration-300
+                  ${
+                    hasUnsavedChanges
+                      ? "bg-orange-600 hover:bg-orange-700 shadow-lg animate-pulse"
+                      : "bg-green-600 hover:bg-green-700"
+                  }
+                `}
               >
-                {saving ? "Guardando..." : "Guardar Cambios"}
+                {saving ? (
+                  "💾 Guardando..."
+                ) : hasUnsavedChanges ? (
+                  <span className="flex items-center gap-2">
+                    ⚠️ Guardar Cambios
+                  </span>
+                ) : (
+                  "✓ Todo Guardado"
+                )}
               </Button>
             </div>
           </div>
@@ -312,6 +346,13 @@ export default function PricesPage() {
           </table>
         </div>
       </main>
+
+      {/* Botón flotante de guardado */}
+      <FloatingSaveButton
+        hasUnsavedChanges={hasUnsavedChanges}
+        onSave={saveChanges}
+        isSaving={saving}
+      />
     </div>
   );
 }

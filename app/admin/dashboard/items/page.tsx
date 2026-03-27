@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import FloatingSaveButton from "@/components/admin/FloatingSaveButton";
+import { useUnsavedChanges } from "@/lib/hooks/useUnsavedChanges";
 
 interface Translation {
   name: string;
@@ -42,6 +44,12 @@ export default function ItemsPage() {
   const [editingItem, setEditingItem] = useState<MenuItem | null>(null);
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
+
+  // Tracking de cambios sin guardar
+  const { hasUnsavedChanges, resetOriginalData } = useUnsavedChanges(
+    items,
+    !loading,
+  );
 
   useEffect(() => {
     loadData();
@@ -124,13 +132,14 @@ export default function ItemsPage() {
       });
 
       if (saveResponse.ok) {
-        alert("Cambios guardados correctamente");
+        alert("✅ Cambios guardados correctamente");
+        resetOriginalData(items); // Reset tracking después de guardar
       } else {
-        alert("Error al guardar cambios");
+        alert("❌ Error al guardar cambios");
       }
     } catch (error) {
       console.error("Error al guardar:", error);
-      alert("Error al guardar cambios");
+      alert("❌ Error al guardar cambios");
     } finally {
       setSaving(false);
     }
@@ -227,9 +236,24 @@ export default function ItemsPage() {
               <Button
                 onClick={saveData}
                 disabled={saving}
-                className="bg-green-600 text-white hover:bg-green-700"
+                className={`
+                  text-white transition-all duration-300
+                  ${
+                    hasUnsavedChanges
+                      ? "bg-orange-600 hover:bg-orange-700 shadow-lg animate-pulse"
+                      : "bg-green-600 hover:bg-green-700"
+                  }
+                `}
               >
-                {saving ? "Guardando..." : "Guardar Cambios"}
+                {saving ? (
+                  "💾 Guardando..."
+                ) : hasUnsavedChanges ? (
+                  <span className="flex items-center gap-2">
+                    ⚠️ Guardar Cambios
+                  </span>
+                ) : (
+                  "✓ Todo Guardado"
+                )}
               </Button>
             </div>
           </div>
@@ -807,6 +831,13 @@ export default function ItemsPage() {
           </div>
         </div>
       )}
+
+      {/* Botón flotante de guardado */}
+      <FloatingSaveButton
+        hasUnsavedChanges={hasUnsavedChanges}
+        onSave={saveData}
+        isSaving={saving}
+      />
     </div>
   );
 }

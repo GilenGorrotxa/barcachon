@@ -6,9 +6,8 @@ import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { getMenuData } from "@/lib/getMenuData";
 
-// Forzar renderizado dinámico en producción para leer del Blob
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// ISR: Regenerar página cada 60 segundos cuando hay cambios
+export const revalidate = 60;
 
 export default async function CategoryPage({
   params,

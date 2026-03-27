@@ -89,7 +89,7 @@ export default function MenuManagementPage() {
       const response = await fetch("/api/admin/menu");
       if (!response.ok) {
         router.push("/admin/login");
-        return;
+        return { sections: [], items: [] };
       }
       const data = await response.json();
 
@@ -110,8 +110,11 @@ export default function MenuManagementPage() {
       if (cartaSections.length > 0) {
         setExpandedSections(new Set([cartaSections[0].id]));
       }
+
+      return { sections: cartaSections, items: cartaItems };
     } catch (error) {
       console.error("Error al cargar datos:", error);
+      return { sections: [], items: [] };
     } finally {
       setLoading(false);
     }
@@ -178,11 +181,22 @@ export default function MenuManagementPage() {
         body: JSON.stringify(fullData),
       });
 
+      console.log("📡 Respuesta del servidor:", {
+        status: saveResponse.status,
+        statusText: saveResponse.statusText,
+        ok: saveResponse.ok,
+      });
+
       if (saveResponse.ok) {
+        const responseData = await saveResponse.json();
+        console.log("✅ Datos de respuesta:", responseData);
         alert("✅ Cambios guardados correctamente");
 
         // Recargar datos desde el servidor para tener el estado actualizado
-        await loadData();
+        const updatedData = await loadData();
+
+        // Resetear tracking de cambios con los datos recién cargados
+        resetOriginalData(updatedData);
       } else {
         const errorData = await saveResponse.json();
         console.error("Error al guardar:", errorData);

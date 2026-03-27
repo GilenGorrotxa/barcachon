@@ -64,7 +64,12 @@ export default function DailyMenuPage() {
       const response = await fetch("/api/admin/menu");
       if (!response.ok) {
         router.push("/admin/login");
-        return;
+        return {
+          primerosPlatos: [],
+          segundosPlatos: [],
+          postresItems: [],
+          price: 17.5,
+        };
       }
       const data = await response.json();
 
@@ -96,11 +101,26 @@ export default function DailyMenuPage() {
       setPostresItems(postres);
 
       // Obtener precio del menú del día
+      let menuPrice = 17.5;
       if (data.menuConfig?.dailyMenu?.price) {
-        setPrice(data.menuConfig.dailyMenu.price);
+        menuPrice = data.menuConfig.dailyMenu.price;
+        setPrice(menuPrice);
       }
+
+      return {
+        primerosPlatos: primeros,
+        segundosPlatos: segundos,
+        postresItems: postres,
+        price: menuPrice,
+      };
     } catch (error) {
       console.error("Error al cargar datos:", error);
+      return {
+        primerosPlatos: [],
+        segundosPlatos: [],
+        postresItems: [],
+        price: 17.5,
+      };
     } finally {
       setLoading(false);
     }
@@ -186,7 +206,10 @@ export default function DailyMenuPage() {
         alert("✅ Menú del día guardado correctamente");
 
         // Recargar datos desde el servidor para tener el estado actualizado
-        await loadData();
+        const updatedData = await loadData();
+
+        // Resetear tracking de cambios con los datos recién cargados
+        resetOriginalData(updatedData);
       } else {
         const errorData = await saveResponse.json();
         console.error("Error al guardar:", errorData);

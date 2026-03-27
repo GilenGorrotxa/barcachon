@@ -38,7 +38,7 @@ export default function PricesPage() {
       const response = await fetch("/api/admin/menu");
       if (!response.ok) {
         router.push("/admin/login");
-        return;
+        return [];
       }
       const data = await response.json();
 
@@ -55,8 +55,11 @@ export default function PricesPage() {
         newPrices: { ...item.price },
       }));
       setPriceUpdates(updates);
+
+      return updates as PriceUpdate[];
     } catch (error) {
       console.error("Error al cargar datos:", error);
+      return [];
     } finally {
       setLoading(false);
     }
@@ -126,7 +129,10 @@ export default function PricesPage() {
         alert("✅ Precios actualizados correctamente");
 
         // Recargar datos desde el servidor para tener el estado actualizado
-        await loadData();
+        const updatedPrices = await loadData();
+
+        // Resetear tracking de cambios con los datos recién cargados
+        resetOriginalData(updatedPrices);
       } else {
         const errorData = await saveResponse.json();
         console.error("Error al guardar:", errorData);

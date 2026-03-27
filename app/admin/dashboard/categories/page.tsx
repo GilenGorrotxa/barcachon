@@ -59,12 +59,15 @@ export default function CategoriesPage() {
       const response = await fetch("/api/admin/menu");
       if (!response.ok) {
         router.push("/admin/login");
-        return;
+        return [];
       }
       const data = await response.json();
-      setSections(data.navigation.mainSections);
+      const sectionsData = data.navigation.mainSections;
+      setSections(sectionsData);
+      return sectionsData as MainSection[];
     } catch (error) {
       console.error("Error al cargar datos:", error);
+      return [];
     } finally {
       setLoading(false);
     }
@@ -87,7 +90,10 @@ export default function CategoriesPage() {
         alert("✅ Cambios guardados correctamente");
 
         // Recargar datos desde el servidor para tener el estado actualizado
-        await loadData();
+        const updatedSections = await loadData();
+
+        // Resetear tracking de cambios con los datos recién cargados
+        resetOriginalData(updatedSections);
       } else {
         const errorData = await saveResponse.json();
         console.error("Error al guardar:", errorData);

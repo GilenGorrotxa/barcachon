@@ -73,7 +73,7 @@ export default function ItemsPage() {
 
       if (!response.ok) {
         router.push("/admin/login");
-        return;
+        return [];
       }
       const data = await response.json();
 
@@ -94,8 +94,11 @@ export default function ItemsPage() {
         });
       }
       setCategories(allCategories);
+
+      return itemsArray as MenuItem[];
     } catch (error) {
       console.error("Error al cargar datos:", error);
+      return [];
     } finally {
       setLoading(false);
     }
@@ -148,7 +151,10 @@ export default function ItemsPage() {
         alert("✅ Cambios guardados correctamente");
 
         // Recargar datos desde el servidor para tener el estado actualizado
-        await loadData();
+        const updatedItems = await loadData();
+
+        // Resetear tracking de cambios con los datos recién cargados
+        resetOriginalData(updatedItems);
       } else {
         const errorData = await saveResponse.json();
         console.error("Error al guardar:", errorData);

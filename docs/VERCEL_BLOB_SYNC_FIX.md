@@ -67,6 +67,7 @@ revalidatePath("/api/admin/menu");
 const blob = await put(BLOB_FILENAME, jsonString, {
   access: "public",
   addRandomSuffix: false,
+  allowOverwrite: true, // Permitir sobrescribir el blob existente
   cacheControlMaxAge: 0, // No cachear
 });
 ```
